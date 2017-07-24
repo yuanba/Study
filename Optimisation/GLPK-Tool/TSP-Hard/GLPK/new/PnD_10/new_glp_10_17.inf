@@ -1,0 +1,49 @@
+GLPSOL: GLPK LP/MIP Solver, v4.57
+Parameter(s) specified in the command line:
+ -m ../TSP.mod -d ./PnD_10/glp_10_17.dat -o ../new/PnD_10/new_glp_10_17.res
+Reading model section from ../TSP.mod...
+26 lines were read
+Reading data section from ./PnD_10/glp_10_17.dat...
+4 lines were read
+Generating ans...
+Generating x_row...
+Generating x_col...
+Generating l_fisrt...
+Generating l_end...
+Generating l_cons...
+Generating l_neg...
+Model has been successfully generated
+GLPK Integer Optimizer, v4.57
+40 rows, 111 columns, 329 non-zeros
+100 integer variables, all of which are binary
+Preprocessing...
+29 rows, 108 columns, 306 non-zeros
+100 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  4.000e+01  ratio =  4.000e+01
+GM: min|aij| =  4.729e-01  max|aij| =  2.115e+00  ratio =  4.472e+00
+EQ: min|aij| =  2.236e-01  max|aij| =  1.000e+00  ratio =  4.472e+00
+2N: min|aij| =  2.500e-01  max|aij| =  1.312e+00  ratio =  5.250e+00
+Constructing initial basis...
+Size of triangular part is 28
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.57
+29 rows, 108 columns, 306 non-zeros
+      0: obj =  -1.530000000e+03 inf =   1.036e+02 (10)
+     25: obj =   2.070000000e+02 inf =   1.110e-16 (0)
+*    36: obj =  -5.329070518e-15 inf =   5.551e-16 (0)
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++    36: mip =     not found yet >=              -inf        (1; 0)
++   201: >>>>>   2.210000000e+02 >=  -5.329070518e-15 100.0% (43; 0)
++   585: >>>>>   1.790000000e+02 >=   5.329070518e-15 100.0% (104; 5)
++   989: >>>>>   1.540000000e+02 >=   2.000000000e+00  98.7% (175; 14)
++  2118: >>>>>   1.500000000e+02 >=   2.100000000e+01  86.0% (357; 46)
++  2409: >>>>>   1.360000000e+02 >=   2.300000000e+01  83.1% (402; 56)
++ 34169: >>>>>   1.340000000e+02 >=   7.300000000e+01  45.5% (4417; 993)
++ 45922: >>>>>   1.330000000e+02 >=   8.157878788e+01  38.7% (5220; 1708)
++117662: mip =   1.330000000e+02 >=     tree is empty   0.0% (0; 22519)
+INTEGER OPTIMAL SOLUTION FOUND
+Time used:   7.2 secs
+Memory used: 6.5 Mb (6845993 bytes)
+Writing MIP solution to '../new/PnD_10/new_glp_10_17.res'...

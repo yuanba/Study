@@ -1,0 +1,53 @@
+GLPSOL: GLPK LP/MIP Solver, v4.57
+Parameter(s) specified in the command line:
+ -m ../TSP.mod -d ./PnD_10/glp_10_23.dat -o ../new/PnD_10/new_glp_10_23.res
+Reading model section from ../TSP.mod...
+26 lines were read
+Reading data section from ./PnD_10/glp_10_23.dat...
+4 lines were read
+Generating ans...
+Generating x_row...
+Generating x_col...
+Generating l_fisrt...
+Generating l_end...
+Generating l_cons...
+Generating l_neg...
+Model has been successfully generated
+GLPK Integer Optimizer, v4.57
+40 rows, 111 columns, 329 non-zeros
+100 integer variables, all of which are binary
+Preprocessing...
+29 rows, 108 columns, 306 non-zeros
+100 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  4.900e+01  ratio =  4.900e+01
+GM: min|aij| =  5.915e-01  max|aij| =  1.690e+00  ratio =  2.858e+00
+EQ: min|aij| =  3.499e-01  max|aij| =  1.000e+00  ratio =  2.858e+00
+2N: min|aij| =  3.750e-01  max|aij| =  1.531e+00  ratio =  4.083e+00
+Constructing initial basis...
+Size of triangular part is 28
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.57
+29 rows, 108 columns, 306 non-zeros
+      0: obj =  -3.150000000e+02 inf =   2.769e+01 (10)
+     26: obj =   2.300000000e+01 inf =   1.110e-16 (0)
+*    32: obj =   0.000000000e+00 inf =   2.220e-16 (0)
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++    32: mip =     not found yet >=              -inf        (1; 0)
++   217: >>>>>   2.070000000e+02 >=   6.000000000e+00  97.1% (42; 0)
++  1087: >>>>>   1.740000000e+02 >=   1.100000000e+01  93.7% (206; 11)
++  3528: >>>>>   1.720000000e+02 >=   1.900000000e+01  89.0% (618; 51)
++  3715: >>>>>   1.600000000e+02 >=   1.900000000e+01  88.1% (636; 59)
++ 11227: >>>>>   1.590000000e+02 >=   3.100000000e+01  80.5% (1861; 231)
++ 12434: >>>>>   1.470000000e+02 >=   3.300000000e+01  77.6% (2055; 261)
++ 13123: >>>>>   1.420000000e+02 >=   3.300000000e+01  76.8% (2076; 413)
++ 23748: >>>>>   1.370000000e+02 >=   4.400000000e+01  67.9% (3552; 804)
++ 53072: >>>>>   1.330000000e+02 >=   6.787500000e+01  49.0% (6689; 2278)
++108921: mip =   1.330000000e+02 >=   1.000000000e+02  24.8% (7615; 8315)
++131231: >>>>>   1.310000000e+02 >=   1.187142857e+02   9.4% (4212; 16028)
++137567: mip =   1.310000000e+02 >=     tree is empty   0.0% (0; 32315)
+INTEGER OPTIMAL SOLUTION FOUND
+Time used:   11.3 secs
+Memory used: 9.1 Mb (9517983 bytes)
+Writing MIP solution to '../new/PnD_10/new_glp_10_23.res'...

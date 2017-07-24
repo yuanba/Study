@@ -1,0 +1,69 @@
+GLPSOL: GLPK LP/MIP Solver, v4.57
+Parameter(s) specified in the command line:
+ --tmlim 120 -m ../TSP.mod -d ./GLPK_50/pnd_50_30.dat -o ../new/PnD_50/new_glp_50_30.res
+Reading model section from ../TSP.mod...
+26 lines were read
+Reading data section from ./GLPK_50/pnd_50_30.dat...
+./GLPK_50/pnd_50_30.dat:3: warning: unexpected end of file; missing end statement inserted
+3 lines were read
+Generating ans...
+Generating x_row...
+Generating x_col...
+Generating l_fisrt...
+Generating l_end...
+Generating l_cons...
+Generating l_neg...
+Model has been successfully generated
+GLPK Integer Optimizer, v4.57
+200 rows, 2551 columns, 7649 non-zeros
+2500 integer variables, all of which are binary
+Preprocessing...
+149 rows, 2548 columns, 7546 non-zeros
+2500 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  2.680e+02  ratio =  2.680e+02
+GM: min|aij| =  3.253e-01  max|aij| =  3.074e+00  ratio =  9.452e+00
+EQ: min|aij| =  1.058e-01  max|aij| =  1.000e+00  ratio =  9.452e+00
+2N: min|aij| =  9.375e-02  max|aij| =  1.375e+00  ratio =  1.467e+01
+Constructing initial basis...
+Size of triangular part is 148
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.57
+149 rows, 2548 columns, 7546 non-zeros
+      0: obj =   1.568000000e+05 inf =   9.600e+01 (1)
+    117: obj =   2.294044898e+04 inf =   1.055e-15 (0)
+*   256: obj =   4.050093594e-13 inf =   6.861e-14 (0) 1
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++   256: mip =     not found yet >=              -inf        (1; 0)
++  4080: mip =     not found yet >=   4.032330025e-13        (307; 2)
++  8944: mip =     not found yet >=   4.032330025e-13        (618; 4)
++ 13369: mip =     not found yet >=   4.032330025e-13        (985; 5)
++ 17402: mip =     not found yet >=   4.032330025e-13        (1292; 6)
++ 20818: mip =     not found yet >=   4.032330025e-13        (1588; 8)
++ 24582: mip =     not found yet >=   4.032330025e-13        (1933; 9)
++ 28516: mip =     not found yet >=   4.032330025e-13        (2269; 10)
++ 31748: mip =     not found yet >=   4.032330025e-13        (2644; 10)
++ 36046: mip =     not found yet >=   4.032330025e-13        (3035; 13)
++ 39771: mip =     not found yet >=   4.032330025e-13        (3362; 13)
++ 43510: mip =     not found yet >=   4.032330025e-13        (3655; 14)
+Time used: 60.0 secs.  Memory used: 7.7 Mb.
++ 47060: mip =     not found yet >=   4.032330025e-13        (3960; 15)
++ 50348: mip =     not found yet >=   4.032330025e-13        (4278; 17)
++ 53960: mip =     not found yet >=   4.032330025e-13        (4577; 18)
++ 58351: mip =     not found yet >=   4.032330025e-13        (4923; 19)
++ 62663: mip =     not found yet >=   4.032330025e-13        (5250; 20)
++ 65750: >>>>>   2.911700000e+04 >=   4.032330025e-13 100.0% (5580; 20)
++ 69369: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (5869; 21)
++ 73986: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (6280; 22)
++ 77818: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (6609; 23)
++ 82265: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (6998; 25)
++ 85672: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (7292; 26)
++ 90295: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (7718; 27)
++ 93877: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (8000; 27)
+Time used: 120.0 secs.  Memory used: 12.3 Mb.
++ 94940: mip =   2.911700000e+04 >=   4.032330025e-13 100.0% (8084; 27)
+TIME LIMIT EXCEEDED; SEARCH TERMINATED
+Time used:   120.0 secs
+Memory used: 12.5 Mb (13093157 bytes)
+Writing MIP solution to '../new/PnD_50/new_glp_50_30.res'...

@@ -1,0 +1,67 @@
+GLPSOL: GLPK LP/MIP Solver, v4.57
+Parameter(s) specified in the command line:
+ --tmlim 120 -m ../TSP.mod -d ./PnD_12/glp_12_06.dat -o ../new/PnD_12/new_glp_12_06.res
+Reading model section from ../TSP.mod...
+26 lines were read
+Reading data section from ./PnD_12/glp_12_06.dat...
+4 lines were read
+Generating ans...
+Generating x_row...
+Generating x_col...
+Generating l_fisrt...
+Generating l_end...
+Generating l_cons...
+Generating l_neg...
+Model has been successfully generated
+GLPK Integer Optimizer, v4.57
+48 rows, 157 columns, 467 non-zeros
+144 integer variables, all of which are binary
+Preprocessing...
+35 rows, 154 columns, 440 non-zeros
+144 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  5.200e+01  ratio =  5.200e+01
+GM: min|aij| =  3.724e-01  max|aij| =  2.685e+00  ratio =  7.211e+00
+EQ: min|aij| =  1.387e-01  max|aij| =  1.000e+00  ratio =  7.211e+00
+2N: min|aij| =  6.250e-02  max|aij| =  1.312e+00  ratio =  2.100e+01
+Constructing initial basis...
+Size of triangular part is 34
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.57
+35 rows, 154 columns, 440 non-zeros
+      0: obj =  -2.640000000e+03 inf =   1.750e+02 (12)
+     33: obj =   9.003647643e+01 inf =   5.551e-17 (0)
+*    40: obj =   0.000000000e+00 inf =   0.000e+00 (0)
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++    40: mip =     not found yet >=              -inf        (1; 0)
++   905: >>>>>   3.430000000e+02 >=   9.000000000e+00  97.4% (174; 3)
++  3343: >>>>>   3.060000000e+02 >=   2.900000000e+01  90.5% (595; 36)
++  3520: >>>>>   2.740000000e+02 >=   3.000000000e+01  89.1% (586; 88)
++ 10321: >>>>>   2.730000000e+02 >=   4.200000000e+01  84.6% (1773; 195)
++ 11402: >>>>>   2.340000000e+02 >=   4.300000000e+01  81.6% (1920; 207)
++ 86068: mip =   2.340000000e+02 >=   7.400000000e+01  68.4% (13126; 1529)
++140264: mip =   2.340000000e+02 >=   8.208000000e+01  64.9% (21399; 2377)
++181787: mip =   2.340000000e+02 >=   8.700000000e+01  62.8% (27375; 3094)
++216527: mip =   2.340000000e+02 >=   9.000000000e+01  61.5% (32408; 3766)
++245939: mip =   2.340000000e+02 >=   9.300000000e+01  60.3% (36477; 4382)
++273515: mip =   2.340000000e+02 >=   9.512000000e+01  59.4% (40353; 4950)
++298236: mip =   2.340000000e+02 >=   9.700000000e+01  58.5% (43706; 5492)
++319815: mip =   2.340000000e+02 >=   9.900000000e+01  57.7% (46665; 6009)
++340642: mip =   2.340000000e+02 >=   1.010000000e+02  56.8% (49506; 6493)
++360836: mip =   2.340000000e+02 >=   1.020000000e+02  56.4% (52117; 6947)
++380374: mip =   2.340000000e+02 >=   1.030000000e+02  56.0% (54634; 7384)
+Time used: 60.0 secs.  Memory used: 41.1 Mb.
++399677: mip =   2.340000000e+02 >=   1.040000000e+02  55.6% (57207; 7805)
++416956: mip =   2.340000000e+02 >=   1.050000000e+02  55.1% (59478; 8213)
++432972: mip =   2.340000000e+02 >=   1.060000000e+02  54.7% (61552; 8618)
++447224: mip =   2.340000000e+02 >=   1.070000000e+02  54.3% (63339; 9017)
++462308: mip =   2.340000000e+02 >=   1.080000000e+02  53.8% (65434; 9396)
++477572: mip =   2.340000000e+02 >=   1.090000000e+02  53.4% (67368; 9765)
+Error: unable to factorize the basis matrix (1)
+ios_driver: unable to solve current LP relaxation; glp_simplex returned 5
++486418: mip =   2.340000000e+02 >=   1.090000000e+02  53.4% (68642; 9922)
+glp_intopt: cannot solve current LP relaxation
+Time used:   88.1 secs
+Memory used: 49.7 Mb (52066647 bytes)
+Writing MIP solution to '../new/PnD_12/new_glp_12_06.res'...

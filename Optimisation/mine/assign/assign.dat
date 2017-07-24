@@ -1,0 +1,14 @@
+data;
+
+set problem:=B1 B2 B3 B4;
+set person:=A1 A2 A3 A4;
+
+#矩阵参数
+param C:B1 B2 B3 B4:=
+A1 7 6 2 0
+A2 1 2 5 4
+A3 3 3 4 7
+A4 9 9 0 1;
+
+end;
+

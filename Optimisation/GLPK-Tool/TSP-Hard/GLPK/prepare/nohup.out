@@ -1,0 +1,336 @@
+mkdir: cannot create directory ‘../PSO_100’: File exists
+Processing 0 / 500 , BEST_NOW : 84318Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 159, in PSO
+    P[j].move(n , w , P_BEST_SEQ)    # Use n to move 
+  File "../PSO.py", line 46, in move
+    t = sample(SAMPLE , 2)
+  File "/usr/lib/python3.5/random.py", line 310, in sample
+    if not isinstance(population, _Sequence):
+  File "/usr/lib/python3.5/abc.py", line 178, in __instancecheck__
+    def __instancecheck__(cls, instance):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 73, in creat_init
+    while not check_result(data , w):
+  File "../PSO.py", line 96, in check_result
+    res += p
+KeyboardInterrupt
+Processing 0 / 500 , BEST_NOW : 89545Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 159, in PSO
+    P[j].move(n , w , P_BEST_SEQ)    # Use n to move 
+  File "../PSO.py", line 46, in move
+    t = sample(SAMPLE , 2)
+  File "/usr/lib/python3.5/random.py", line 316, in sample
+    result = [None] * k
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 231, in _randbelow
+    while r >= n:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 272, in shuffle
+    x[i], x[j] = x[j], x[i]
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 272, in shuffle
+    x[i], x[j] = x[j], x[i]
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 272, in shuffle
+    x[i], x[j] = x[j], x[i]
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 224, in _randbelow
+    random = self.random
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 228, in _randbelow
+    if type(random) is BuiltinMethod or type(getrandbits) is Method:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 232, in _randbelow
+    r = getrandbits(k)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 229, in _randbelow
+    k = n.bit_length()  # don't use (n-1) here because n can be 1
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 225, in _randbelow
+    getrandbits = self.getrandbits
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+KeyboardInterrupt
+Processing 0 / 500 , BEST_NOW : 104891Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 159, in PSO
+    P[j].move(n , w , P_BEST_SEQ)    # Use n to move 
+  File "../PSO.py", line 48, in move
+    if check_result(self.now , w) == False : continue
+  File "../PSO.py", line 96, in check_result
+    res += p
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 228, in _randbelow
+    if type(random) is BuiltinMethod or type(getrandbits) is Method:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 230, in _randbelow
+    r = getrandbits(k)          # 0 <= r < 2**k
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 230, in _randbelow
+    r = getrandbits(k)          # 0 <= r < 2**k
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 231, in _randbelow
+    while r >= n:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 224, in _randbelow
+    random = self.random
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+KeyboardInterrupt
+Processing 0 / 500 , BEST_NOW : 93008Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 159, in PSO
+    P[j].move(n , w , P_BEST_SEQ)    # Use n to move 
+  File "../PSO.py", line 18, in move
+    pause = check_result(self.now , w)
+  File "../PSO.py", line 93, in check_result
+    for i in range(n):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 232, in _randbelow
+    r = getrandbits(k)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 220, in _randbelow
+    def _randbelow(self, n, int=int, maxsize=1<<BPF, type=type,
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "../PSO.py", line 206, in <module>
+    origin , best , bestseq = PSO(n , w , nagent , time)
+  File "../PSO.py", line 142, in PSO
+    P.append(agent_module(n , w))
+  File "../PSO.py", line 7, in __init__
+    self.now  = creat_init(n , w)
+  File "../PSO.py", line 74, in creat_init
+    shuffle(data)
+  File "/usr/lib/python3.5/random.py", line 271, in shuffle
+    j = randbelow(i+1)
+  File "/usr/lib/python3.5/random.py", line 229, in _randbelow
+    k = n.bit_length()  # don't use (n-1) here because n can be 1
+KeyboardInterrupt
+Processing 0 / 500 , BEST_NOW : 81550Processing 50 / 500 , BEST_NOW : 19645Processing 100 / 500 , BEST_NOW : 19645Processing 150 / 500 , BEST_NOW : 19645Processing 200 / 500 , BEST_NOW : 19645Processing 250 / 500 , BEST_NOW : 19645Processing 300 / 500 , BEST_NOW : 19645Processing 350 / 500 , BEST_NOW : 19645Processing 400 / 500 , BEST_NOW : 19645Processing 450 / 500 , BEST_NOW : 19645One of the Instance has been writed into the file!

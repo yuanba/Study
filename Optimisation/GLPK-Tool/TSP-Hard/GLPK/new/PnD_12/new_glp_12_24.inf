@@ -1,0 +1,75 @@
+GLPSOL: GLPK LP/MIP Solver, v4.57
+Parameter(s) specified in the command line:
+ --tmlim 120 -m ../TSP.mod -d ./PnD_12/glp_12_24.dat -o ../new/PnD_12/new_glp_12_24.res
+Reading model section from ../TSP.mod...
+26 lines were read
+Reading data section from ./PnD_12/glp_12_24.dat...
+4 lines were read
+Generating ans...
+Generating x_row...
+Generating x_col...
+Generating l_fisrt...
+Generating l_end...
+Generating l_cons...
+Generating l_neg...
+Model has been successfully generated
+GLPK Integer Optimizer, v4.57
+48 rows, 157 columns, 467 non-zeros
+144 integer variables, all of which are binary
+Preprocessing...
+35 rows, 154 columns, 440 non-zeros
+144 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  5.200e+01  ratio =  5.200e+01
+GM: min|aij| =  5.569e-01  max|aij| =  1.796e+00  ratio =  3.225e+00
+EQ: min|aij| =  3.101e-01  max|aij| =  1.000e+00  ratio =  3.225e+00
+2N: min|aij| =  2.500e-01  max|aij| =  1.531e+00  ratio =  6.125e+00
+Constructing initial basis...
+Size of triangular part is 34
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.57
+35 rows, 154 columns, 440 non-zeros
+      0: obj =  -2.904000000e+03 inf =   2.015e+02 (12)
+     33: obj =   1.576356305e+02 inf =   3.331e-16 (0)
+*    44: obj =  -1.598721155e-14 inf =   1.110e-16 (0)
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++    44: mip =     not found yet >=              -inf        (1; 0)
++   683: >>>>>   3.130000000e+02 >=   1.800000000e+01  94.2% (120; 1)
++   915: >>>>>   2.900000000e+02 >=   1.800000000e+01  93.8% (157; 2)
++  2594: >>>>>   2.700000000e+02 >=   3.800000000e+01  85.9% (452; 15)
++  7045: >>>>>   2.450000000e+02 >=   5.200000000e+01  78.8% (1273; 61)
++  7230: >>>>>   2.130000000e+02 >=   5.200000000e+01  75.6% (1241; 172)
++ 75317: mip =   2.130000000e+02 >=   8.600000000e+01  59.6% (12258; 1241)
++ 82477: >>>>>   2.120000000e+02 >=   8.800000000e+01  58.5% (13340; 1356)
++103687: >>>>>   2.070000000e+02 >=   9.200000000e+01  55.6% (16374; 1843)
++147967: mip =   2.070000000e+02 >=   1.000000000e+02  51.7% (22298; 3395)
++182903: mip =   2.070000000e+02 >=   1.040000000e+02  49.8% (27014; 4182)
++205605: mip =   2.070000000e+02 >=   1.070000000e+02  48.3% (29969; 4747)
++230259: mip =   2.070000000e+02 >=   1.100000000e+02  46.9% (33189; 5337)
++250800: mip =   2.070000000e+02 >=   1.120000000e+02  45.9% (35725; 5920)
++272884: mip =   2.070000000e+02 >=   1.140000000e+02  44.9% (38462; 6514)
++274189: >>>>>   2.060000000e+02 >=   1.140000000e+02  44.7% (38624; 6549)
++293703: mip =   2.060000000e+02 >=   1.160000000e+02  43.7% (40554; 7624)
++313742: mip =   2.060000000e+02 >=   1.170000000e+02  43.2% (42953; 8167)
++326770: >>>>>   1.970000000e+02 >=   1.180000000e+02  40.1% (44572; 8567)
++343420: mip =   1.970000000e+02 >=   1.200000000e+02  39.1% (42511; 14577)
+Time used: 60.0 secs.  Memory used: 34.5 Mb.
++360096: mip =   1.970000000e+02 >=   1.210000000e+02  38.6% (44284; 15112)
++376163: mip =   1.970000000e+02 >=   1.222012741e+02  38.0% (45947; 15635)
++390655: mip =   1.970000000e+02 >=   1.238846103e+02  37.1% (47319; 16153)
++404561: mip =   1.970000000e+02 >=   1.246783626e+02  36.7% (48707; 16656)
++417960: mip =   1.970000000e+02 >=   1.250000000e+02  36.5% (49944; 17139)
++430234: mip =   1.970000000e+02 >=   1.260000000e+02  36.0% (51000; 17627)
++441994: mip =   1.970000000e+02 >=   1.270000000e+02  35.5% (52021; 18114)
++453314: mip =   1.970000000e+02 >=   1.280000000e+02  35.0% (52910; 18590)
++464828: mip =   1.970000000e+02 >=   1.290000000e+02  34.5% (53898; 19058)
++475224: mip =   1.970000000e+02 >=   1.300000000e+02  34.0% (54807; 19521)
++487440: mip =   1.970000000e+02 >=   1.301578947e+02  33.9% (55793; 19957)
++497174: mip =   1.970000000e+02 >=   1.310000000e+02  33.5% (56535; 20411)
+Time used: 120.0 secs.  Memory used: 46.8 Mb.
++502761: mip =   1.970000000e+02 >=   1.316923077e+02  33.2% (56998; 20635)
+TIME LIMIT EXCEEDED; SEARCH TERMINATED
+Time used:   120.0 secs
+Memory used: 46.9 Mb (49130767 bytes)
+Writing MIP solution to '../new/PnD_12/new_glp_12_24.res'...

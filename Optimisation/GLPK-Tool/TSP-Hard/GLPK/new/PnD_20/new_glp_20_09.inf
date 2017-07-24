@@ -1,0 +1,73 @@
+GLPSOL: GLPK LP/MIP Solver, v4.57
+Parameter(s) specified in the command line:
+ --tmlim 120 -m ../TSP.mod -d ./PnD_20/glp_20_09.dat -o ../new/PnD_20/new_glp_20_09.res
+Reading model section from ../TSP.mod...
+26 lines were read
+Reading data section from ./PnD_20/glp_20_09.dat...
+4 lines were read
+Generating ans...
+Generating x_row...
+Generating x_col...
+Generating l_fisrt...
+Generating l_end...
+Generating l_cons...
+Generating l_neg...
+Model has been successfully generated
+GLPK Integer Optimizer, v4.57
+80 rows, 421 columns, 1259 non-zeros
+400 integer variables, all of which are binary
+Preprocessing...
+59 rows, 418 columns, 1216 non-zeros
+400 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  1.160e+02  ratio =  1.160e+02
+GM: min|aij| =  3.624e-01  max|aij| =  2.760e+00  ratio =  7.616e+00
+EQ: min|aij| =  1.313e-01  max|aij| =  1.000e+00  ratio =  7.616e+00
+2N: min|aij| =  1.250e-01  max|aij| =  1.469e+00  ratio =  1.175e+01
+Constructing initial basis...
+Size of triangular part is 58
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.57
+59 rows, 418 columns, 1216 non-zeros
+      0: obj =   8.170000000e+03 inf =   1.800e+01 (1)
+     48: obj =   7.529619647e+02 inf =   1.377e-15 (0)
+*    79: obj =   7.105427358e-15 inf =   7.772e-16 (0)
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++    79: mip =     not found yet >=              -inf        (1; 0)
++  1160: >>>>>   1.999000000e+03 >=   7.105427358e-15 100.0% (167; 0)
++  5882: >>>>>   1.281000000e+03 >=   7.000000000e+00  99.5% (865; 13)
++ 25119: >>>>>   1.045000000e+03 >=   1.400000000e+01  98.7% (3702; 85)
++ 58006: mip =   1.045000000e+03 >=   2.000000000e+01  98.1% (8436; 347)
++ 81414: >>>>>   1.020000000e+03 >=   2.400000000e+01  97.6% (11779; 386)
++ 93015: >>>>>   8.870000000e+02 >=   2.500000000e+01  97.2% (13645; 478)
++124450: mip =   8.870000000e+02 >=   2.800000000e+01  96.8% (17620; 991)
++125495: >>>>>   8.810000000e+02 >=   2.800000000e+01  96.8% (17770; 994)
++142157: >>>>>   8.580000000e+02 >=   2.900000000e+01  96.6% (20273; 1090)
++172778: mip =   8.580000000e+02 >=   3.000000000e+01  96.5% (24736; 1351)
++203364: mip =   8.580000000e+02 >=   3.100000000e+01  96.4% (29095; 1419)
++233770: mip =   8.580000000e+02 >=   3.200000000e+01  96.3% (33474; 1492)
++263165: mip =   8.580000000e+02 >=   3.300000000e+01  96.2% (37814; 1568)
++293589: mip =   8.580000000e+02 >=   3.400000000e+01  96.0% (42050; 1651)
++322994: mip =   8.580000000e+02 >=   3.500000000e+01  95.9% (46433; 1728)
++351076: mip =   8.580000000e+02 >=   3.500000000e+01  95.9% (50724; 1807)
++361467: >>>>>   8.250000000e+02 >=   3.600000000e+01  95.6% (52219; 1834)
+Time used: 60.0 secs.  Memory used: 37.1 Mb.
++388493: mip =   8.250000000e+02 >=   3.600000000e+01  95.6% (55784; 2632)
++416085: mip =   8.250000000e+02 >=   3.700000000e+01  95.5% (59780; 2708)
++443205: mip =   8.250000000e+02 >=   3.700000000e+01  95.5% (63845; 2794)
++469312: mip =   8.250000000e+02 >=   3.800000000e+01  95.4% (67654; 2883)
++496274: mip =   8.250000000e+02 >=   3.800000000e+01  95.4% (71619; 2958)
++523643: mip =   8.250000000e+02 >=   3.900000000e+01  95.3% (75334; 3034)
++549761: mip =   8.250000000e+02 >=   4.000000000e+01  95.2% (79099; 3111)
++573905: mip =   8.250000000e+02 >=   4.000000000e+01  95.2% (82689; 3194)
++598279: mip =   8.250000000e+02 >=   4.000000000e+01  95.2% (86326; 3282)
++623013: mip =   8.250000000e+02 >=   4.100000000e+01  95.0% (89973; 3362)
++625646: >>>>>   8.130000000e+02 >=   4.100000000e+01  95.0% (90387; 3370)
++649052: mip =   8.130000000e+02 >=   4.100000000e+01  95.0% (93528; 4018)
++673238: mip =   8.130000000e+02 >=   4.100000000e+01  95.0% (97263; 4089)
++673356: mip =   8.130000000e+02 >=   4.100000000e+01  95.0% (97280; 4089)
+TIME LIMIT EXCEEDED; SEARCH TERMINATED
+Time used:   120.0 secs
+Memory used: 69.6 Mb (72952821 bytes)
+Writing MIP solution to '../new/PnD_20/new_glp_20_09.res'...

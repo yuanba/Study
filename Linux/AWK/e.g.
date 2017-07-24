@@ -1,0 +1,1535 @@
+Script started on Sat May 20 12:35:51 2017
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk ''{'}'p}'r}'i}'n}' }'[1P}'t}' }''}''}'[C[1P}'[1P}'"}'"}'l"}'a"}'n"}'t"}'i"}'a"}'n"}'[C[C[C
+^C
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{print "lantian"}'[1@B[1@E[1@G[1@I[1@N[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+lantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{print "lantian"}'[1P}'‘}'[C[1P}''}'[1Plantian'}''lantian'}'
+
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ “”[C[K[K""s"h"[1P"[1P"s"h"a"n"g"[1P"[1P"[1P"[1P"[1P"上"面"的"单"引"号"是"肺"癌"[2P"[2P"非"法"的"[C
+上面的单引号是非法的: command not found
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ "上面的单引号是非法的"awk 'BEGIN{print 'lantian'}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+AWK - Introduction.ipynb  typescript
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ vim touch[K[K[K[K[K[K[K[K[Ktouch lantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ echo ""l"a"n"t"i"a"n"　"[2P" "i"s" "h"e"r"e" "f"o"r" "y"o"u"!"[C
+lantian is here for you!
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls
+AWK - Introduction.ipynb  lantian  typescript
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ lsecho "lantian is here for you!"[18Ptouch lantianls[K"上面的单引号是非法的"awk 'BEGIN{print 'lantian'}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'"}'"}'$"}'1"}'[C,}'"}'"}'$"}'2"}'[C[C[C lanti an
+$1 $2
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{print "$1","$2"}' lantiaan[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C}' lantian[K[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C}' lantian [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[2@ｔ[C[C[2P[1@t[C[1P[1P[1P[1P[1P
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{print}' lantian[1P[1P[1P[1P[1P
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{}' lantian[1P lantian[1P lantian[1P lantian[1P lantian
+^C
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk  lantian'{}' lantian[5@print[C[C[C[C[C[C[C[C[C[CBEGIN{print "$1","$2"}' lantiaan[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[13P{print}' lantian
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [1@$[1P
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{print }' lantian[1@$[1@0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ cat lantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ catl[K lantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ s
+s: command not found
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls
+AWK - Introduction.ipynb  lantian  typescript
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ vim[K[K[Kecho [K[K[K[K[Kvim lantian
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"lantian" 0L, 0C[>c[1;1H[33m  1 [m
+[1m[34m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1[9CAll]2;lantian (~/File/Study Coding/Linux/AWK) - VIM]1;lantian[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;53Hi[1;5H[24;53H [1;5H[24;1H[1m-- INSERT --[m[24;13H[K[24;63H0,1[11CAll[1;5H[?12l[?25h[?25lI[24;63H1,2]2;lantian + (~/File/Study Coding/Linux/AWK) - VIM]1;lantian[1;6H[?12l[?25h[?25l[24;65H3[1;7H[?12l[?25h[?25la[24;65H4[1;8H[?12l[?25h[?25lm[24;65H5[1;9H[?12l[?25h[?25l[24;65H6[1;10H[?12l[?25h[?25ll[24;65H7[1;11H[?12l[?25h[?25la[24;65H8[1;12H[?12l[?25h[?25ln[24;65H9[1;13H[?12l[?25h[?25lt[24;65H10[1;14H[?12l[?25h[?25li[24;66H1[1;15H[?12l[?25h[?25la[24;66H2[1;16H[?12l[?25h[?25ln[24;66H3[1;17H[?12l[?25h[?25l[24;66H4[1;18H[?12l[?25h[?25la[24;66H5[1;19H[?12l[?25h[?25ln[24;66H6[1;20H[?12l[?25h[?25ld[24;66H7[1;21H[?12l[?25h[?25l[24;66H8[1;22H[?12l[?25h[?25li[24;66H9[1;23H[?12l[?25h[?25l[24;65H20[1;24H[?12l[?25h[?25la[24;66H1[1;25H[?12l[?25h[?25lm[24;66H2[1;26H[?12l[?25h[?25l[24;66H3[1;27H[?12l[?25h[?25lh[24;66H4[1;28H[?12l[?25h[?25le[24;66H5[1;29H[?12l[?25h[?25lr[24;66H6[1;30H[?12l[?25h[?25le[24;66H7[1;31H[?12l[?25h[?25l![24;66H8[1;32H[?12l[?25h[?25l
+[33m  2 [m[2;5H[K[24;63H2,1 [2;5H[?12l[?25h[?25lI[24;65H2[2;6H[?12l[?25h[?25l[24;65H3[2;7H[?12l[?25h[?25lt[24;65H4[2;8H[?12l[?25h[?25lh[24;65H5[2;9H[?12l[?25h[?25li[24;65H6[2;10H[?12l[?25h[?25ln[24;65H7[2;11H[?12l[?25h[?25lk[24;65H8[2;12H[?12l[?25h[?25l[24;65H9[2;13H[?12l[?25h[?25lh[24;65H10[2;14H[?12l[?25h[?25le[24;66H1[2;15H[?12l[?25h[?25lr[24;66H2[2;16H[?12l[?25h[?25le[24;66H3[2;17H[?12l[?25h[?25l[24;66H4[2;18H[?12l[?25h[?25li[24;66H5[2;19H[?12l[?25h[?25l[24;66H6[2;20H[?12l[?25h[?25la[24;66H7[2;21H[?12l[?25h[?25lm[24;66H8[2;22H[?12l[?25h[?25l![24;66H9[2;23H[?12l[?25h[?25l[24;1H[K[24;63H2,18[10CAll[2;22H[?12l[?25h[?25l[24;53H:[2;22H[24;53H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"lantian" 2L, 47C [w]]2;lantian@GMFTBY: ~/File/Study Coding/Linux/AWK]1;lantian@GMFTBY: ~/File/Study Coding/Linux/AWK
+[?1l>[?12l[?25h[?1049l]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls
+AWK - Introduction.ipynb  lantian  typescript
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ lsvim lantianls[K[1Pscat lantian[13@awk '{print $0}'[C[C[C[C[C[C[C[C
+I am lantian and i am here!
+I think here i am!
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{print $0}' lantianls[Kvim lantianls[K[1Pscat lantian[13@awk '{print $0}'[C[C[C[C[C[C[C[C[2P[C[C[C[C[C[C[C[C[C[C
+I am lantian and i am here!
+I think here i am!
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{print }' lantian[2@$0[C[C[C[C[C[C[C[C[C[Cls[Kvim lantianls[K[1Pscat lantian[K[K[K[K[K[K[K[K[K[K[Kawk '' lantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ cat lantian
+I am lantian and i am here!
+I think here i am!
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ cat lantian[3@awk ''[C[C[C[C[C[C[C[C[8@{print }[C[C[C[C[C[C[C[C[C[2@$0[C[C[C[C[C[C[C[C[C[Cls[Kawk '{print $0}' lantian[1P[1@1[1P[1@1[1@,[1@$[1@2[1@,[1@$[1@3[1@-[1P[1@-[1@f[1P[1@F[1@ [1P[C[1@'[C'{print $1,$2,$3}' lantian [A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[''{print $1,$2,$3}' lantiann[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C]''{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C ]''{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C:]''{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C:]''{print $1,$2,$3}' lanti[1Pan[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C#:]''{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C/]''{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C
+
+^[[A^[[A^[[A            ^C
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -F'[#:/]''{print $1,$2,$3}' lanntian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+I am lantian and i am here!  
+I think here i am!  
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -F'[#:/]' '{print $1,$2,$3}' laantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lan[1Ptian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ]' '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C
+
+I am lantian
+I think here
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -F'[#:/ ]' '{print $1,$2,$3}' llantian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' la[1Pntian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lan[1Ptian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lant[1Pian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lanti[1Pan[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantia[1Pn[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian[K[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@C[1P[1@V[1P[1@v[C '{print $1,$2,$3}' lantian [A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[CF '{print $1,$2,$3}' lantiann[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[CS '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C= '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C' '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C' '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C#' '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C ' '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[CO '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CF '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CS '{print $1,$2,$3[1@}[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C= '{print $1,$2,$[1@3[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$2,[1@$[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$2[1@,[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+" '{print $1,$[1@2[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+" '{print $1,[1@$[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+" '{print $1[1@,[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+awk: line 1: syntax error at or near +
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v FS='# ' OFS="+++" '{print $11,$2,$3}' lantian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-OFS="+++" '{print $[1@1[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CVOFS="+++" '{print [1@$[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[COFS="+++" '{print $[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CvOFS="+++" '{print [1@$[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C OFS="+++" '{print[1@ [A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+I am lantian and i am here!++++++
+I think here i am!++++++
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v FS='# ' -v OFS="+++" '{printt $1,$2,$3}' lantian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ' -v OFS="+++" '{print [1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C
+
+I+++am+++lantian
+I+++think+++here
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v FS=' ' -v OFS="+++" '{print  $1,$2,$3}' lantian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}[1P[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}'[1P lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' [1Plantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' l[1Pantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' la[1Pntian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lan[1Ptian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C{print $1,$2,$3}' lant[1Pian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lanti[1Pan[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C{print $1,$2,$3}' lantia[1Pn[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lantian[K[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lantian [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[2@－[2P[1@-[1@v[1@ r'{print $1,$2,$3}' lantian [A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[Cs'{print $1,$2,$3}' lantiann[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lantian [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CR'{print $1,$2,$3}' lantian [A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[CS'{print $1,$2,$3}' lantiann[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C='{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C"'{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C"'{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[CD'{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C'{print $1,$2,$3}' lant[1Pian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[CF" '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[CD" '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$2,$3}' la[1Pntian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$2,$3}' lan[1Ptian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[Cf" '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[Cd" '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[Cf" '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$2,$3}' l[1Pantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$2,$3}' la[1Pntian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$2,$3}' lan[1Ptian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C " '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C
+
+I  
+am  
+lantian  
+and  
+i  
+am  
+here! I 
+think  
+here  
+i  
+am!  
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v RS=" " '{print $1,$2,$3}' laantian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C- '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C '{print $1,$2,$3}' lantian[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CO '{print $1,$2,$3[1@}[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CR '{print $1,$2,$[1@3[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CS '{print $1,$2,[1@$[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C= '{print $1,$2[1@,[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,$[1@2[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" '{print $1,[1@$[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+" '{print $1[1@,[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+" '{print $[1@1[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+" '{print [1@$[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+I  +++am  +++lantian  +++and  +++i  +++am  +++here! I +++think  +++here  +++i  +++am!  +++]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ vm[Kim lantian 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"lantian" 2L, 47C[>c[1;1H[33m  1 [mI am lantian and i am here!
+[33m  2 [mI think here i am!
+[1m[34m~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll]2;lantian (~/File/Study Coding/Linux/AWK) - VIM]1;lantian[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;1HType  :quit<Enter>  to exit Vim[24;63H[K[24;63H1,1[11CAll[1;5H[?12l[?25h[?25l[24;53H:[1;5H[24;1H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"lantian" 2L, 47C [w]]2;lantian@GMFTBY: ~/File/Study Coding/Linux/AWK]1;lantian@GMFTBY: ~/File/Study Coding/Linux/AWK
+[?1l>[?12l[?25h[?1049l]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ vim lantian 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"lantian" 2L, 47C[>c[1;1H[33m  1 [mI am lantian and i am here!
+[33m  2 [mI think here i am!
+[1m[34m~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll]2;lantian (~/File/Study Coding/Linux/AWK) - VIM]1;lantian[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;1HType  :quit<Enter>  to exit Vim[24;63H[K[24;63H1,1[11CAll[1;5H[?12l[?25h[?25l[24;53H:[1;5H[24;1H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l"lantian" 2L, 47C [w]]2;lantian@GMFTBY: ~/File/Study Coding/Linux/AWK]1;lantian@GMFTBY: ~/File/Study Coding/Linux/AWK
+[?1l>[?12l[?25h[?1049l]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ vim lantian awk -v RS=" " -v ORS="+++" '{print  $1,$2,$3}' lantian[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22Pvim lantian 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk -v RS=" " -v ORS="+++" '{print  $1,$2,$3}' lantian[1@,[1@N[1@R
+I   1+++am   2+++lantian   3+++and   4+++i   5+++am   6+++here! I  7+++think   8+++here   9+++i   10+++am!   11+++]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v RS=" " -v ORS="+++" '{print  $1,$2,$3,NR}' lantian[1P[1@F
+I   1+++am   1+++lantian   1+++and   1+++i   1+++am   1+++here! I  2+++think   1+++here   1+++i   1+++am!   1+++]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v RS=" " -v ORS="+++" '{print  $1,$2,$3,NF}' lantian[1P[1P[1@F[1@I[1@L[1@E[1@N[1@A[1@M[1@E
+I   lantian+++am   lantian+++lantian   lantian+++and   lantian+++i   lantian+++am   lantian+++here! I  lantian+++think   lantian+++here   lantian+++i   lantian+++am!   lantian+++]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v RS=" " -v ORS="+++" '{print  $1,$2,$3,FILENAME}' lantian[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KAWK[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kawk ''{'}'p}'r}'t}'n}'[1P}'[1P}'i}'n}'t}' }'A}'R}'G}'C}' }'[1@b[1@e[1@g[1@i[1@n[1P[1P[1P[1P[1P[1@B[1@E[1@G[1@I[1@N[C[C[C[C[C[C[C[C[C[C[C, }'[1P }', }'[C[1P}'a}'r}'g}'v}'[1P}'[1P}'[1P}'[1P}'A}'R}'G}'V}'[}']}'0]}'[C,}'A}'R}' [A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CG}''[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CV}'[}']}'1]}'[C[C[C LANI[K[K[K[Klantian
+2 awk lantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ name=lantian[K[K[K[K[K[K[Kwoshilantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v n=$name ''{'}'p}'r}'i}'n}'t}' }'n}'a}'m}'e}'[1P}'[1P}'[1P}'[C[C lantian [A
+woshilantian
+woshilantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk -v n=$name '{print n}' lantian [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[1@n[1@=[1@$[1@n[1@a[1@m[1@e[1@;
+I am lantian and i am here!
+I am lantian and i am here!
+I think here i am!
+I think here i am!
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'n=$name;{print n}' lantian[1P[1@{
+I am lantian and i am here!
+I think here i am!
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf ""%"s" "[1P"\"t" "%"d"\"n"[C lantian[K[K[K[K[K[K[Klantian 123 yeq i 120
+lantian	 123
+yeqi	 120
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %d\n" lantian 123 yeqii 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\n" lantian 123 yeqi [1P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Cｓ\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\n" lantian 123 yeqi [2P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Cs\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+lantian	 123
+yeqi	 120
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %s\n" lantian 123 yeqii 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\t %s\n" lantian 123 yeqi [1P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[Cd\t %s\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C
+
+bash: printf: lantian: invalid number
+0	 123
+bash: printf: yeqi: invalid number
+0	 120
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%d\t %s\n" lantian 123 yeqii 120[C[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[Kn
+bash: printf: lantian: invalid number
+0	 
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%d\t %s\n" lantian 123 yeqii 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs
+[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\n" lantian 123 yeqi [1P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Co\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+lantian	 173
+yeqi	 170
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %o\n" lantian 123 yeqii 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\n" lantian 123 yeqi [1P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Cx\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+lantian	 7b
+yeqi	 78
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %x\n" lantian 123 yeqii 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\n" lantian 123 yeqi [1P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[CX\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+lantian	 7B
+yeqi	 78
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %X\n" lantian 123 yeqii 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C%X\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+lantian	 %X
+123	 %X
+yeqi	 %X
+120	 %X
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %%X\n" lantian 123 yeqqi 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C%X\n" lantian 123 ye[1@q[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+lantian	 %7B
+yeqi	 %78
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %%%X\n" lantian 123 yeeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[CX\n" lantian 123 yeq[1P[C[C[C[C[C[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[CX\n" lantian 123 yeqi[1P 120[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\n" lantian 123 yeqi [1P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Cf\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C\n" lantian 123 yeqi [1P120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[CF\n" lantian 123 yeqi 120[A]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+lantian	 123.000000
+yeqi	 120.000000
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%s\t %F\n" lantian 123 yeqii 120[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ks"1s"0s"[C[C lan
+       lan]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%10s" lan[C[1@-
+lan       ]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%-10s" lan[1P[1@2[1@.[1@5[C[1P[1@f[C[C[C[C[C[K[K[K3.1415926535
+3.14159     ]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%-12.5f" 3.1415926535[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[K]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ %-12.5f" 3.1415926535[3Pprintf "%-10s" lan%-12.5f" 3.1415926535[3Pprintf "%-10s" lan[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kprintf ""$"[1P"5"1"0"[1P"[1P"[1P"%"1"0"d"[C\"n"[C 1234
+      1234
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%10d\n" 1234[1@+[1P[1@-
+1234      
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%-10d\n" 1234[1P[1@+[C
+     +1234
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%+10d\n" 1234[C[C[1P[1P
++1234
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%+d\n" 1234[1P[1@-
+1234
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%-d\n" 1234[1P[1@+[C[C[C[C[C[C[C[C[C-1234
+-1234
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ printf "%+d\n" -1234[Kawk ""[C[K[K''{'}'p}'r}'i}'n}'t}'f}' }'"}'"}'l"}'n"}'t"}'[1P"}'[1P"}'a"}'n"}'t"}'i"}'a"}'n"}'[C[1P"}'[1P"}'[1P"}'[1P"}'[1P"}'[1P"}'[1P"}'$"}'s"}'[C,}'"}'"}'l"}'a"}'n"}'t"}'i"}'a"}'n"}'[C,}'"}'"}'y"}'e"}'q"}'i"}'[C[C[C
+^C
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{printf "$s","lantian","yeqi"}' '[1P'[C[1@B[1@E[1@G[1@I[1@N
+$s]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "$s","lantian","yeqi"}'[1Ps","lantian","yeqi"}'$s","lantian","yeqi"}'[1Ps","lantian","yeqi"}'%s","lantian","yeqi"}'[C[C[C[1P"lantian","yeqi"}' "lantian","yeqi"}'
+yeqilantian]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s" "lantian","yeqi"}'$s","lantian","yeqi"}'%s" "lantian","yeqi"}'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P"yeqi"}'
+awk: run time error: not enough arguments passed to printf("%slantianyeqi")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s" "lantian""yeqi"}' "yeqi"}'
+awk: run time error: not enough arguments passed to printf("%slantianyeqi")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s" "lantian" "yeqi"}'[1P"yeqi"}',"yeqi"}'
+yeqilantian]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s" "lantian","yeqi"}'[1@\[1@N[1P[1@n
+yeqi
+lantian]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n" "lantian","yeqi"}'[1@%[1@s[1@\[1@n
+yeqi
+awk: run time error: not enough arguments passed to printf("%s
+%s
+lantian")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n%s\n" "lantian","yeqi"}'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+yeqi
+awk: run time error: not enough arguments passed to printf("%s
+%s
+lantian")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n%s\n" "lantian","yeqi"}'[C[C[1P"lantian","yeqi"}',"lantian","yeqi"}'
+lantian
+yeqi
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n%s\n","lantian","yeqi"}'
+lantian
+yeqi
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n%s\n","lantian","yeqi"}'[C[C[C[C[C[C[C[C[C[1P"yeqi"}' "yeqi"}'
+lantianyeqi
+awk: run time error: not enough arguments passed to printf("%s
+%s
+")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n%s\n","lantian" "yeqi"}'[1P"yeqi"}',"yeqi"}'[1P"lantian","yeqi"}' "lantian","yeqi"}'
+yeqi
+awk: run time error: not enough arguments passed to printf("%s
+%s
+lantian")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n%s\n" "lantian","yeqi"}'[1P"lantian","yeqi"}',"lantian","yeqi"}'
+lantian
+yeqi
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s\n%s\n","lantian","yeqi"}'[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C　[K lantian[1@$[1@f[1@1[1@0[1@.[1@5[C[C[1@\[1@n[C[1P[1@t[C[C[C[C[1P[1@t[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@%[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@,[1@N[1@R
+lantian	yeqi	   1.00000
+lantian	yeqi	   2.00000
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{printf "%s\t%s\t%10.5f\n","lantian","yeqi",NR}' lantian[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@$[1@1[C[1@,[1@$[1@2[C[C[C[C[C[C[C[C[C[C[C[C[C
+I	am	   1.00000
+I	think	   2.00000
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{printf "%s\t%s\t%10.5f\n",$1,$2,NR}' lantian[C[1P[1P
+I	am   1.00000
+I	think   2.00000
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{printf "%s\t%s%10.5f\n",$1,$2,NR}' lantian[2@\t[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+I	am	   1.00000
+I	think	   2.00000
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{printf "%s\t%s\t%10.5f\n",$1,$2,NR}' lantian[C[C[1P
+%s	%s	%10.5f
+ I am 1
+%s	%s	%10.5f
+ I think 2
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk '{print "%s\t%s\t%10.5f\n",$1,$2,NR}' lantian[1@f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1Ps[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@\t[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11@"lantian","yeqi"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14PBEGIN{printf "%s\n%s\n","lantian","yeqi"}' "lantian","yeqi"}'[C[1P[1P[1P[1P[1P[1P[1P[1@b[C[C[C[C[C[C[C[C[C[C\","yeqi"}'n","yeqi"}'
+awk: run time error: improper conversion(number 1) in printf("%blantian
+")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%b" "lantian\n","yeqi"}'[C[C[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'
+awk: run time error: not enough arguments passed to printf("%blantian
+")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%b" "lantian\n"}'[1P"lantian\n"}',"lantian\n"}'
+awk: run time error: improper conversion(number 1) in printf("%b")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%b","lantian\n"}'[C[C[C[C[C[C[C[C[C[C[1P\n"}'[1P\n"}'[1P\n"}'[1P\n"}'[1P\n"}'[1P\n"}'[1P\n"}'
+awk: run time error: improper conversion(number 1) in printf("%b")
+	FILENAME="" FNR=0 NR=0
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%b","\n"}'[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kawk ''{'}'p}'r}'i}'n}'t}' }'"}'"}'a"}'l"}'n"}'t"}'a"}'i"}'n"}'[C }'"}'"}'h"}'e"}'i"}'z"}'i"}'w"}'a"}'n"}'g"}'[C[C[C[C[1@B[1@E[1@G[1@I[1@N
+alntainheiziwang
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{print "alntain" "heiziwang"}'[C[C[C[C[C[C[C[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'p}'r}'i}'n}'t}'f}' }'[1P}' }'"}'"}'%"}'s"}'[C }'[1P}',}'l}'a}'n}'t}'i}'a}'n}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'[1P}'"}'"}'l"}'a"}'n"}'t"}'i"}'a"}'n"}'[C;}'e}'c}'h}'o}' }'"}'"}'[C[C
+lantian]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s","lantian";echo ""}';}'
+lantian]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ awk 'BEGIN{printf "%s","lantian";echo "";}'[Kawk[K[K[Kls -la
+total 92
+drwxrwxr-x 3 lantian lantian  4096 May 20 13:46 [0m[01;34m.[0m
+drwxrwxr-x 9 lantian lantian  4096 May 20 12:20 [01;34m..[0m
+drwxr-xr-x 2 lantian lantian  4096 May 20 12:35 [01;34m.ipynb_checkpoints[0m
+-rw-rw-r-- 1 lantian lantian  8512 May 20 13:46 AWK - Introduction.ipynb
+-rw-rw-r-- 1 lantian lantian    47 May 20 13:05 lantian
+-rw-rw-r-- 1 lantian lantian 61440 May 20 13:37 typescript
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls[K[Kls ~/
+[0m[01;34mAlgorithm[0m              [01;34mAndroidStudioProjects[0m  [01;34mDownload[0m    [01;34mFile[0m             [01;34mKali[0m      [01;34mMV[0m     [01;34mMyReport[0m  [01;34mPublic[0m    [01;34manaconda2[0m  [01;34mexample-content[0m  [01;34mvmware[0m
+[01;34mAndroid-develop-tools[0m  [01;34mC++[0m                    Eg.desktop  [01;34mIDLE_COLLECTION[0m  [01;34mLeetcode[0m  [01;34mMusic[0m  [01;34mPSCA[0m      [01;34mTemplate[0m  [01;34mdesktop[0m    [01;34mphoto[0m            [01;34m桌面[0m
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ | awk ''{'}'B{}'E{}'G{}'I{}'N{}'[1P{}'[1P{}'[1P{}'[1P{}'[1P{}'B{}'E{}'G{}'I{}'N{}'[C }'[1P}'[C[1P'[1P'[1P'[1P'[1P'[1P'[1P'B'E'I'G'N'[1P'[1P'[1P'[1P'[1P'I'F' '[1P'[1P'[1P'i'f' '(')'$)'[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K -la
+total 1036
+drwxr-xr-x 55 lantian lantian   4096 May 20 13:05 [0m[01;34m.[0m
+drwxr-xr-x  5 root    root      4096 Mar 22 18:55 [01;34m..[0m
+-rw-------  1 lantian lantian  12288 Mar 30 15:17 .15.py.swp
+drwxrwxr-x  5 lantian lantian   4096 Feb 26 09:12 [01;34m.AndroidStudio2.1[0m
+drwxrwxr-x  4 lantian lantian   4096 Feb 23 17:25 [01;34m.AndroidStudio2.2[0m
+-rw-------  1 lantian lantian  57244 May 19 18:27 .ICEauthority
+-rw-------  1 lantian lantian    102 May 19 18:27 .Xauthority
+-rw-------  1 lantian lantian  12288 Feb 25 21:18 .a.sh.swp
+drwxrwxr-x  4 lantian lantian   4096 Feb 24 14:46 [01;34m.android[0m
+-rw-rw-r--  1 lantian lantian    116 Apr  7 19:18 .apport-ignore.xml
+-rw-------  1 lantian lantian  29369 May 20 10:24 .bash_history
+-rw-r--r--  1 lantian lantian    220 Feb  7 02:30 .bash_logout
+-rw-r--r--  1 lantian lantian   3772 May  9 23:46 .bashrc
+-rw-r--r--  1 lantian lantian  16384 Apr 22 20:11 .bashrc.swp
+drwx------ 34 lantian lantian   4096 May 17 16:38 [01;34m.cache[0m
+drwxr-xr-x  3 lantian lantian   4096 Apr  5 11:20 [01;34m.codeblocks[0m
+drwx------  3 lantian lantian   4096 Feb  9 14:36 [01;34m.compiz[0m
+drwxrwxr-x  3 lantian lantian   4096 Apr 22 20:25 [01;34m.conda[0m
+drwx------ 37 lantian lantian   4096 May 12 14:54 [01;34m.config[0m
+drwx------  3 lantian lantian   4096 Feb  9 16:11 [01;34m.dbus[0m
+-rw-r--r--  1 lantian lantian     25 Feb  7 02:35 .dmrc
+-rw-------  1 lantian lantian     16 Feb 26 20:22 .emulator_console_auth_token
+drwx------  3 lantian lantian   4096 May 19 18:28 [01;34m.gconf[0m
+-rw-rw-r--  1 lantian lantian    321 Apr 17 14:52 .gitconfig
+-rw-r-----  1 lantian lantian      0 Apr 28 14:47 .gksu.lock
+drwx------  3 lantian lantian   4096 Apr  5 09:32 [01;34m.gnome2[0m
+drwx------  2 lantian lantian   4096 Apr  5 09:32 [01;34m.gnome2_private[0m
+drwx------  3 lantian lantian   4096 May 19 18:27 [01;34m.gnupg[0m
+drwxrwxr-x  6 lantian lantian   4096 Feb 26 09:22 [01;34m.gradle[0m
+-rw-r--r--  1 lantian lantian  12288 Mar 30 16:50 .greedy_tree.cpp.swo
+drwx------  2 root    root      4096 Feb 17 22:31 [01;34m.gvfs[0m
+drwxrwxr-x  2 lantian lantian   4096 Mar 27 18:09 [01;34m.idlerc[0m
+drwxrwxr-x  2 lantian lantian   4096 Apr 26 21:49 [01;34m.ipynb_checkpoints[0m
+drwxrwxr-x  5 lantian lantian   4096 Apr 18 21:54 [01;34m.ipython[0m
+drwxrwxr-x  4 lantian lantian   4096 Feb 23 21:15 [01;34m.java[0m
+drwxr-xr-x  3 lantian lantian   4096 May 16 17:56 [01;34m.jupyter[0m
+-rw-------  1 lantian lantian  12288 Mar  4 16:45 .lantian.swp
+-rw-------  1 lantian lantian     35 Feb  8 10:37 .lesshst
+drwx------  5 lantian lantian   4096 Apr 26 21:16 [01;34m.local[0m
+-rw-------  1 lantian lantian  12288 Mar  6 12:47 .main.c.swp
+drwx------  4 lantian lantian   4096 Feb  8 14:40 [01;34m.mozilla[0m
+-rw-rw-r--  1 lantian lantian   3195 May 10 16:55 .mycli-history
+-rw-rw-r--  1 lantian lantian 104566 May 10 16:55 .mycli.log
+-rw-rw-r--  1 lantian lantian   2936 May  8 17:23 .myclirc
+-rw-------  1 lantian lantian  31416 May 10 17:00 .mysql_history
+-rw-------  1 lantian lantian  12288 Mar  2 10:45 .nim.py.swp
+-rw-------  1 lantian lantian  12288 Mar 29 18:56 .nothing.py.swp
+-rw-r--r--  1 lantian lantian  12288 Mar  5 23:51 .nothing.swp
+drwxrwxr-x  2 lantian lantian   4096 Feb 24 13:34 [01;34m.oracle_jre_usage[0m
+-rw-r--r--  1 lantian lantian    261 Feb 23 12:40 .pam_environment
+-rw-rw-r--  1 lantian lantian      0 Mar  6 17:08 .po
+drwx------  2 lantian lantian   4096 Feb 23 11:42 [01;34m.presage[0m
+-rw-rw-r--  1 lantian lantian    756 May 16 16:55 .profile
+drwxr-xr-x  3 lantian lantian   4096 Apr 12 12:34 [01;34m.python-eggs[0m
+-rw-------  1 lantian lantian  12288 Mar 29 18:55 .python.py.swp
+-rw-------  1 lantian lantian  24714 May 19 21:21 .python_history
+-rw-------  1 lantian lantian  12288 Mar 29 19:31 .pythonuu.pyy.swp
+drwxrwxr-x  2 lantian lantian   4096 Apr 27 21:47 [01;34m.remarkable[0m
+-rw-------  1 lantian lantian   1024 Apr 10 14:18 .rnd
+drwxr-xr-x  2 lantian lantian   4096 Apr  1 15:24 [01;34m.rpmdb[0m
+drwxrwxr-x  2 lantian lantian   4096 May 20 13:45 [01;34m.sogouinput[0m
+-rw-------  1 lantian lantian  12288 Apr 20 19:07 .some.cpp.swp
+-rw-r--r--  1 lantian lantian  12288 Apr  1 15:14 .some.py.swn
+-rw-------  1 lantian lantian  12288 Mar 29 19:37 .some.py.swo
+-rw-------  1 lantian lantian  12288 Mar 29 18:52 .some.py.swp
+-rw-------  1 lantian lantian  12288 Mar  9 11:57 .somehting.swp
+-rw-r--r--  1 lantian lantian  12288 Mar 29 20:03 .something.cpp.swm
+-rw-r--r--  1 lantian lantian  12288 Mar 29 20:01 .something.cpp.swn
+-rw-r--r--  1 lantian lantian  12288 Mar 29 19:56 .something.cpp.swo
+-rw-------  1 lantian lantian  12288 Mar 29 19:40 .something.cpp.swp
+-rw-r--r--  1 lantian lantian  12288 Mar  8 23:56 .something.swn
+-rw-r--r--  1 lantian lantian  12288 Mar  6 12:16 .something.swo
+-rw-r--r--  1 lantian lantian  12288 Mar  5 23:18 .something.swp
+-rw-r--r--  1 lantian lantian  12288 Mar 30 10:56 .sort.cpp.swp
+drwx------  2 lantian lantian   4096 Apr 15 16:55 [01;34m.ssh[0m
+-rw-r--r--  1 lantian lantian      0 Feb 23 10:56 .sudo_as_admin_successful
+-rw-------  1 lantian lantian  12288 Apr  1 15:17 .swf
+-rw-------  1 lantian lantian  12288 Apr  1 15:17 .swg
+-rw-------  1 lantian lantian  12288 Mar 29 19:24 .swh
+-rw-------  1 lantian lantian  12288 Mar 29 18:47 .swi
+-rw-------  1 lantian lantian  12288 Mar 29 18:45 .swj
+-rw-------  1 lantian lantian  12288 Mar 29 18:45 .swk
+-rw-------  1 lantian lantian  12288 Mar 29 18:43 .swl
+-rw-------  1 lantian lantian  12288 Mar 29 11:44 .swm
+-rw-------  1 lantian lantian  12288 Mar 29 11:42 .swn
+-rw-------  1 lantian lantian  12288 Feb 25 21:19 .swo
+-rw-------  1 lantian lantian  12288 Feb 24 10:24 .swp
+-rw-------  1 lantian lantian  12288 Apr  7 00:02 .test.cpp.swp
+drwx------  4 lantian lantian   4096 May 17 16:38 [01;34m.thunderbird[0m
+-rw-r--r--  1 lantian lantian  12288 Feb 25 14:05 .true.swp
+drwxr-xr-x  2 lantian lantian   4096 Apr 26 21:16 [01;34m.vim[0m
+-rw-rw-r--  1 lantian lantian  32668 May 20 13:05 .viminfo
+-rw-rw-r--  1 lantian lantian   3487 Apr 29 11:28 .vimrc
+drwxr-xr-x  2 lantian lantian   4096 May 10 18:18 [01;34m.vmware[0m
+-rw-r--r--  1 root    root       175 Apr 28 12:35 .wget-hsts
+-rw-rw-r--  1 lantian lantian    132 Apr 11 19:55 .xinputrc
+-rw-------  1 lantian lantian    292 May 19 18:27 .xsession-errors
+-rw-------  1 lantian lantian   1662 May 19 18:14 .xsession-errors.old
+drwxrwxr-x  5 lantian lantian   4096 May 15 21:57 [01;34mAlgorithm[0m
+drwxrwxr-x  5 lantian lantian   4096 Feb 24 13:46 [01;34mAndroid-develop-tools[0m
+drwxrwxr-x 29 lantian lantian   4096 Mar 25 14:37 [01;34mAndroidStudioProjects[0m
+drwxrwxr-x  4 lantian lantian   4096 May 16 22:14 [01;34mC++[0m
+drwxr-xr-x  6 lantian lantian   4096 Apr 28 13:49 [01;34mDownload[0m
+-rw-r--r--  1 lantian lantian    229 Apr 15 15:59 Eg.desktop
+drwxr-xr-x  3 lantian lantian   4096 May 17 14:48 [01;34mFile[0m
+drwxrwxr-x  2 lantian lantian   4096 Apr  5 23:24 [01;34mIDLE_COLLECTION[0m
+drwxrwxr-x  2 lantian lantian   4096 Apr 28 13:49 [01;34mKali[0m
+drwxrwxr-x  3 lantian lantian   4096 Mar 20 20:45 [01;34mLeetcode[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mMV[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mMusic[0m
+drwxrwxr-x  2 lantian lantian   4096 May 15 21:29 [01;34mMyReport[0m
+drwxrwxr-x  5 lantian lantian   4096 Apr 30 18:22 [01;34mPSCA[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mPublic[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mTemplate[0m
+drwxrwxr-x 20 lantian lantian   4096 Apr 22 19:58 [01;34manaconda2[0m
+drwxr-xr-x  2 lantian lantian   4096 Apr 10 21:36 [01;34mdesktop[0m
+drwxr-xr-x  3 lantian lantian   4096 Feb 18  2016 [01;34mexample-content[0m
+drwxr-xr-x  4 lantian lantian   4096 May 17 00:18 [01;34mphoto[0m
+drwxrwxr-x  3 lantian lantian   4096 Apr 28 14:45 [01;34mvmware[0m
+drwxr-xr-x  2 lantian lantian   4096 May 17 16:18 [01;34m桌面[0m
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la[K-laawk 'BEGIN{printf "%s","lantian";echo "";}'ls -la[K[1P~/ | awk ''{'}'i}'f}' }'(}')}'l)}'a)}'n)}'t)}'i)}'a)}'n)}'[1P)}'[1P)}'[1P)}'[1P)}'[1P)}'[1P)}'[1P)}'$)}'1)}' )}'=)}'=)}' )}'[1P)}'[1P)}'[1P)}'[1P)}'[1P)}'3)}' )}'=)}'=)}' )}'l)}'a)}'n)}'t)}'i)}'a)}'n)}'[1P)}'[1P)}'[1P)}'[1P)}'[1P)}'[1P)}'[1P)}'i)}'o)}'[1P)}'[1P)}'r)}'o)}'o)}'t)}'[C }''}''}'[1P}'[1P}'[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C{}'p}'r}'i}'n}'t}' }''}''}'$'}'[C[1P}'[1P}'[1P}'$}'N}'F}'[C[C
+awk: line 1: syntax error at or near if
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ | awk 'if ($3 == root) {print $NF}'[1P
+awk: line 1: syntax error at or near if
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ | awk 'if($3 == root) {print $NF}'[1@ [C[C[C[C[C[C[C[C[C[C[1@ 
+awk: line 1: syntax error at or near if
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ | awk 'if( $3 == root ) {print $NF}'[C[C[C[1P[1P[1@{[1@ [1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ 
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ | awk '{if( $3 == root ) print $NF}'[C[C[1P[1P[1P[1P[1@l[1@a[1@n[1@t[1@i[1@a[1@n[1P[1P[1P[1P[1P[1P[1P[1@l[1@a[1@n[1@t[1@i[1@a[1@n
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ | awk '{if( $3 == lantian ) print $NF}'[1@-[1@l[1@a[1@ 
+1036
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{if( $3 == lantian ) print $NF}'[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1@r[1@o[1@o[1@t
+1036
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls -[K~/ -la
+total 1036
+drwxr-xr-x 55 lantian lantian   4096 May 20 13:05 [0m[01;34m.[0m
+drwxr-xr-x  5 root    root      4096 Mar 22 18:55 [01;34m..[0m
+-rw-------  1 lantian lantian  12288 Mar 30 15:17 .15.py.swp
+drwxrwxr-x  5 lantian lantian   4096 Feb 26 09:12 [01;34m.AndroidStudio2.1[0m
+drwxrwxr-x  4 lantian lantian   4096 Feb 23 17:25 [01;34m.AndroidStudio2.2[0m
+-rw-------  1 lantian lantian  57244 May 19 18:27 .ICEauthority
+-rw-------  1 lantian lantian    102 May 19 18:27 .Xauthority
+-rw-------  1 lantian lantian  12288 Feb 25 21:18 .a.sh.swp
+drwxrwxr-x  4 lantian lantian   4096 Feb 24 14:46 [01;34m.android[0m
+-rw-rw-r--  1 lantian lantian    116 Apr  7 19:18 .apport-ignore.xml
+-rw-------  1 lantian lantian  29369 May 20 10:24 .bash_history
+-rw-r--r--  1 lantian lantian    220 Feb  7 02:30 .bash_logout
+-rw-r--r--  1 lantian lantian   3772 May  9 23:46 .bashrc
+-rw-r--r--  1 lantian lantian  16384 Apr 22 20:11 .bashrc.swp
+drwx------ 34 lantian lantian   4096 May 17 16:38 [01;34m.cache[0m
+drwxr-xr-x  3 lantian lantian   4096 Apr  5 11:20 [01;34m.codeblocks[0m
+drwx------  3 lantian lantian   4096 Feb  9 14:36 [01;34m.compiz[0m
+drwxrwxr-x  3 lantian lantian   4096 Apr 22 20:25 [01;34m.conda[0m
+drwx------ 37 lantian lantian   4096 May 12 14:54 [01;34m.config[0m
+drwx------  3 lantian lantian   4096 Feb  9 16:11 [01;34m.dbus[0m
+-rw-r--r--  1 lantian lantian     25 Feb  7 02:35 .dmrc
+-rw-------  1 lantian lantian     16 Feb 26 20:22 .emulator_console_auth_token
+drwx------  3 lantian lantian   4096 May 19 18:28 [01;34m.gconf[0m
+-rw-rw-r--  1 lantian lantian    321 Apr 17 14:52 .gitconfig
+-rw-r-----  1 lantian lantian      0 Apr 28 14:47 .gksu.lock
+drwx------  3 lantian lantian   4096 Apr  5 09:32 [01;34m.gnome2[0m
+drwx------  2 lantian lantian   4096 Apr  5 09:32 [01;34m.gnome2_private[0m
+drwx------  3 lantian lantian   4096 May 19 18:27 [01;34m.gnupg[0m
+drwxrwxr-x  6 lantian lantian   4096 Feb 26 09:22 [01;34m.gradle[0m
+-rw-r--r--  1 lantian lantian  12288 Mar 30 16:50 .greedy_tree.cpp.swo
+drwx------  2 root    root      4096 Feb 17 22:31 [01;34m.gvfs[0m
+drwxrwxr-x  2 lantian lantian   4096 Mar 27 18:09 [01;34m.idlerc[0m
+drwxrwxr-x  2 lantian lantian   4096 Apr 26 21:49 [01;34m.ipynb_checkpoints[0m
+drwxrwxr-x  5 lantian lantian   4096 Apr 18 21:54 [01;34m.ipython[0m
+drwxrwxr-x  4 lantian lantian   4096 Feb 23 21:15 [01;34m.java[0m
+drwxr-xr-x  3 lantian lantian   4096 May 16 17:56 [01;34m.jupyter[0m
+-rw-------  1 lantian lantian  12288 Mar  4 16:45 .lantian.swp
+-rw-------  1 lantian lantian     35 Feb  8 10:37 .lesshst
+drwx------  5 lantian lantian   4096 Apr 26 21:16 [01;34m.local[0m
+-rw-------  1 lantian lantian  12288 Mar  6 12:47 .main.c.swp
+drwx------  4 lantian lantian   4096 Feb  8 14:40 [01;34m.mozilla[0m
+-rw-rw-r--  1 lantian lantian   3195 May 10 16:55 .mycli-history
+-rw-rw-r--  1 lantian lantian 104566 May 10 16:55 .mycli.log
+-rw-rw-r--  1 lantian lantian   2936 May  8 17:23 .myclirc
+-rw-------  1 lantian lantian  31416 May 10 17:00 .mysql_history
+-rw-------  1 lantian lantian  12288 Mar  2 10:45 .nim.py.swp
+-rw-------  1 lantian lantian  12288 Mar 29 18:56 .nothing.py.swp
+-rw-r--r--  1 lantian lantian  12288 Mar  5 23:51 .nothing.swp
+drwxrwxr-x  2 lantian lantian   4096 Feb 24 13:34 [01;34m.oracle_jre_usage[0m
+-rw-r--r--  1 lantian lantian    261 Feb 23 12:40 .pam_environment
+-rw-rw-r--  1 lantian lantian      0 Mar  6 17:08 .po
+drwx------  2 lantian lantian   4096 Feb 23 11:42 [01;34m.presage[0m
+-rw-rw-r--  1 lantian lantian    756 May 16 16:55 .profile
+drwxr-xr-x  3 lantian lantian   4096 Apr 12 12:34 [01;34m.python-eggs[0m
+-rw-------  1 lantian lantian  12288 Mar 29 18:55 .python.py.swp
+-rw-------  1 lantian lantian  24714 May 19 21:21 .python_history
+-rw-------  1 lantian lantian  12288 Mar 29 19:31 .pythonuu.pyy.swp
+drwxrwxr-x  2 lantian lantian   4096 Apr 27 21:47 [01;34m.remarkable[0m
+-rw-------  1 lantian lantian   1024 Apr 10 14:18 .rnd
+drwxr-xr-x  2 lantian lantian   4096 Apr  1 15:24 [01;34m.rpmdb[0m
+drwxrwxr-x  2 lantian lantian   4096 May 20 13:45 [01;34m.sogouinput[0m
+-rw-------  1 lantian lantian  12288 Apr 20 19:07 .some.cpp.swp
+-rw-r--r--  1 lantian lantian  12288 Apr  1 15:14 .some.py.swn
+-rw-------  1 lantian lantian  12288 Mar 29 19:37 .some.py.swo
+-rw-------  1 lantian lantian  12288 Mar 29 18:52 .some.py.swp
+-rw-------  1 lantian lantian  12288 Mar  9 11:57 .somehting.swp
+-rw-r--r--  1 lantian lantian  12288 Mar 29 20:03 .something.cpp.swm
+-rw-r--r--  1 lantian lantian  12288 Mar 29 20:01 .something.cpp.swn
+-rw-r--r--  1 lantian lantian  12288 Mar 29 19:56 .something.cpp.swo
+-rw-------  1 lantian lantian  12288 Mar 29 19:40 .something.cpp.swp
+-rw-r--r--  1 lantian lantian  12288 Mar  8 23:56 .something.swn
+-rw-r--r--  1 lantian lantian  12288 Mar  6 12:16 .something.swo
+-rw-r--r--  1 lantian lantian  12288 Mar  5 23:18 .something.swp
+-rw-r--r--  1 lantian lantian  12288 Mar 30 10:56 .sort.cpp.swp
+drwx------  2 lantian lantian   4096 Apr 15 16:55 [01;34m.ssh[0m
+-rw-r--r--  1 lantian lantian      0 Feb 23 10:56 .sudo_as_admin_successful
+-rw-------  1 lantian lantian  12288 Apr  1 15:17 .swf
+-rw-------  1 lantian lantian  12288 Apr  1 15:17 .swg
+-rw-------  1 lantian lantian  12288 Mar 29 19:24 .swh
+-rw-------  1 lantian lantian  12288 Mar 29 18:47 .swi
+-rw-------  1 lantian lantian  12288 Mar 29 18:45 .swj
+-rw-------  1 lantian lantian  12288 Mar 29 18:45 .swk
+-rw-------  1 lantian lantian  12288 Mar 29 18:43 .swl
+-rw-------  1 lantian lantian  12288 Mar 29 11:44 .swm
+-rw-------  1 lantian lantian  12288 Mar 29 11:42 .swn
+-rw-------  1 lantian lantian  12288 Feb 25 21:19 .swo
+-rw-------  1 lantian lantian  12288 Feb 24 10:24 .swp
+-rw-------  1 lantian lantian  12288 Apr  7 00:02 .test.cpp.swp
+drwx------  4 lantian lantian   4096 May 17 16:38 [01;34m.thunderbird[0m
+-rw-r--r--  1 lantian lantian  12288 Feb 25 14:05 .true.swp
+drwxr-xr-x  2 lantian lantian   4096 Apr 26 21:16 [01;34m.vim[0m
+-rw-rw-r--  1 lantian lantian  32668 May 20 13:05 .viminfo
+-rw-rw-r--  1 lantian lantian   3487 Apr 29 11:28 .vimrc
+drwxr-xr-x  2 lantian lantian   4096 May 10 18:18 [01;34m.vmware[0m
+-rw-r--r--  1 root    root       175 Apr 28 12:35 .wget-hsts
+-rw-rw-r--  1 lantian lantian    132 Apr 11 19:55 .xinputrc
+-rw-------  1 lantian lantian    292 May 19 18:27 .xsession-errors
+-rw-------  1 lantian lantian   1662 May 19 18:14 .xsession-errors.old
+drwxrwxr-x  5 lantian lantian   4096 May 15 21:57 [01;34mAlgorithm[0m
+drwxrwxr-x  5 lantian lantian   4096 Feb 24 13:46 [01;34mAndroid-develop-tools[0m
+drwxrwxr-x 29 lantian lantian   4096 Mar 25 14:37 [01;34mAndroidStudioProjects[0m
+drwxrwxr-x  4 lantian lantian   4096 May 16 22:14 [01;34mC++[0m
+drwxr-xr-x  6 lantian lantian   4096 Apr 28 13:49 [01;34mDownload[0m
+-rw-r--r--  1 lantian lantian    229 Apr 15 15:59 Eg.desktop
+drwxr-xr-x  3 lantian lantian   4096 May 17 14:48 [01;34mFile[0m
+drwxrwxr-x  2 lantian lantian   4096 Apr  5 23:24 [01;34mIDLE_COLLECTION[0m
+drwxrwxr-x  2 lantian lantian   4096 Apr 28 13:49 [01;34mKali[0m
+drwxrwxr-x  3 lantian lantian   4096 Mar 20 20:45 [01;34mLeetcode[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mMV[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mMusic[0m
+drwxrwxr-x  2 lantian lantian   4096 May 15 21:29 [01;34mMyReport[0m
+drwxrwxr-x  5 lantian lantian   4096 Apr 30 18:22 [01;34mPSCA[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mPublic[0m
+drwxr-xr-x  2 lantian lantian   4096 Feb 23 12:43 [01;34mTemplate[0m
+drwxrwxr-x 20 lantian lantian   4096 Apr 22 19:58 [01;34manaconda2[0m
+drwxr-xr-x  2 lantian lantian   4096 Apr 10 21:36 [01;34mdesktop[0m
+drwxr-xr-x  3 lantian lantian   4096 Feb 18  2016 [01;34mexample-content[0m
+drwxr-xr-x  4 lantian lantian   4096 May 17 00:18 [01;34mphoto[0m
+drwxrwxr-x  3 lantian lantian   4096 Apr 28 14:45 [01;34mvmware[0m
+drwxr-xr-x  2 lantian lantian   4096 May 17 16:18 [01;34m桌面[0m
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{if( $3 == root ) print $NF}'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@i[1@f[1@([1@)[1@$[1@3[1@ [1@=[1@=[1@ [1@r[1@o[1@o[1@t[C[1@ 
+awk: line 1: syntax error at or near if
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk 'if($3 == root) {print $NF}'[C[1P[1@{[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'{'}'p}'r}'i}'n}'t}' }'$}'3}'[C[1P'[1P[C[C[C[C[C[C[C[C[C
+awk: line 1: syntax error at or near print
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk 'print $3'[C|'[C[1P'}'[C[1@{
+
+lantian
+root
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+root
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+root
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+lantian
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{print $3}'[2Pprint $3'if($3 == root) {print $NF}'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+awk: line 1: syntax error at or near if
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk 'if($3 == root) {print $NF}'[1P[1@{
+1036
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{if($3 == root) print $NF}'[1@/[1P[1@/[C[C[C[C[1@/
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{if($3 == /root/) print $NF}'[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[1P
+awk: line 1: syntax error at or near print
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{/root/ print $NF}'[1P[1P[1P[1P[1P[1P[1P[1@/[1@/[1@r[1@o[1@o[1@t[C
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '/root/{print $NF}'[C[C[1P[1@"[1P[1@"
+1036
+.
+..
+.15.py.swp
+.AndroidStudio2.1
+.AndroidStudio2.2
+.ICEauthority
+.Xauthority
+.a.sh.swp
+.android
+.apport-ignore.xml
+.bash_history
+.bash_logout
+.bashrc
+.bashrc.swp
+.cache
+.codeblocks
+.compiz
+.conda
+.config
+.dbus
+.dmrc
+.emulator_console_auth_token
+.gconf
+.gitconfig
+.gksu.lock
+.gnome2
+.gnome2_private
+.gnupg
+.gradle
+.greedy_tree.cpp.swo
+.gvfs
+.idlerc
+.ipynb_checkpoints
+.ipython
+.java
+.jupyter
+.lantian.swp
+.lesshst
+.local
+.main.c.swp
+.mozilla
+.mycli-history
+.mycli.log
+.myclirc
+.mysql_history
+.nim.py.swp
+.nothing.py.swp
+.nothing.swp
+.oracle_jre_usage
+.pam_environment
+.po
+.presage
+.profile
+.python-eggs
+.python.py.swp
+.python_history
+.pythonuu.pyy.swp
+.remarkable
+.rnd
+.rpmdb
+.sogouinput
+.some.cpp.swp
+.some.py.swn
+.some.py.swo
+.some.py.swp
+.somehting.swp
+.something.cpp.swm
+.something.cpp.swn
+.something.cpp.swo
+.something.cpp.swp
+.something.swn
+.something.swo
+.something.swp
+.sort.cpp.swp
+.ssh
+.sudo_as_admin_successful
+.swf
+.swg
+.swh
+.swi
+.swj
+.swk
+.swl
+.swm
+.swn
+.swo
+.swp
+.test.cpp.swp
+.thunderbird
+.true.swp
+.vim
+.viminfo
+.vimrc
+.vmware
+.wget-hsts
+.xinputrc
+.xsession-errors
+.xsession-errors.old
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '"root"{print $NF}'[1@$[1@3[1@=[1@=
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3=="root"{print $NF}'[1@i[1@f[1@([C[C[C[C[C[C[1P[1P[1P[C[C[C[C[1P[1P[1@~
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~"root"{print $NF}'[1P[1P
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~"ro"{print $NF}'[1P[1P[1@"[C[1P[1@;[1P[1@l[1@*
+1036
+.
+..
+.15.py.swp
+.AndroidStudio2.1
+.AndroidStudio2.2
+.ICEauthority
+.Xauthority
+.a.sh.swp
+.android
+.apport-ignore.xml
+.bash_history
+.bash_logout
+.bashrc
+.bashrc.swp
+.cache
+.codeblocks
+.compiz
+.conda
+.config
+.dbus
+.dmrc
+.emulator_console_auth_token
+.gconf
+.gitconfig
+.gksu.lock
+.gnome2
+.gnome2_private
+.gnupg
+.gradle
+.greedy_tree.cpp.swo
+.gvfs
+.idlerc
+.ipynb_checkpoints
+.ipython
+.java
+.jupyter
+.lantian.swp
+.lesshst
+.local
+.main.c.swp
+.mozilla
+.mycli-history
+.mycli.log
+.myclirc
+.mysql_history
+.nim.py.swp
+.nothing.py.swp
+.nothing.swp
+.oracle_jre_usage
+.pam_environment
+.po
+.presage
+.profile
+.python-eggs
+.python.py.swp
+.python_history
+.pythonuu.pyy.swp
+.remarkable
+.rnd
+.rpmdb
+.sogouinput
+.some.cpp.swp
+.some.py.swn
+.some.py.swo
+.some.py.swp
+.somehting.swp
+.something.cpp.swm
+.something.cpp.swn
+.something.cpp.swo
+.something.cpp.swp
+.something.swn
+.something.swo
+.something.swp
+.sort.cpp.swp
+.ssh
+.sudo_as_admin_successful
+.swf
+.swg
+.swh
+.swi
+.swj
+.swk
+.swl
+.swm
+.swn
+.swo
+.swp
+.test.cpp.swp
+.thunderbird
+.true.swp
+.vim
+.viminfo
+.vimrc
+.vmware
+.wget-hsts
+.xinputrc
+.xsession-errors
+.xsession-errors.old
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~"l*"{print $NF}'[1P[1P[1@r[1@*[1P[1@*
+1036
+.
+..
+.15.py.swp
+.AndroidStudio2.1
+.AndroidStudio2.2
+.ICEauthority
+.Xauthority
+.a.sh.swp
+.android
+.apport-ignore.xml
+.bash_history
+.bash_logout
+.bashrc
+.bashrc.swp
+.cache
+.codeblocks
+.compiz
+.conda
+.config
+.dbus
+.dmrc
+.emulator_console_auth_token
+.gconf
+.gitconfig
+.gksu.lock
+.gnome2
+.gnome2_private
+.gnupg
+.gradle
+.greedy_tree.cpp.swo
+.gvfs
+.idlerc
+.ipynb_checkpoints
+.ipython
+.java
+.jupyter
+.lantian.swp
+.lesshst
+.local
+.main.c.swp
+.mozilla
+.mycli-history
+.mycli.log
+.myclirc
+.mysql_history
+.nim.py.swp
+.nothing.py.swp
+.nothing.swp
+.oracle_jre_usage
+.pam_environment
+.po
+.presage
+.profile
+.python-eggs
+.python.py.swp
+.python_history
+.pythonuu.pyy.swp
+.remarkable
+.rnd
+.rpmdb
+.sogouinput
+.some.cpp.swp
+.some.py.swn
+.some.py.swo
+.some.py.swp
+.somehting.swp
+.something.cpp.swm
+.something.cpp.swn
+.something.cpp.swo
+.something.cpp.swp
+.something.swn
+.something.swo
+.something.swp
+.sort.cpp.swp
+.ssh
+.sudo_as_admin_successful
+.swf
+.swg
+.swh
+.swi
+.swj
+.swk
+.swl
+.swm
+.swn
+.swo
+.swp
+.test.cpp.swp
+.thunderbird
+.true.swp
+.vim
+.viminfo
+.vimrc
+.vmware
+.wget-hsts
+.xinputrc
+.xsession-errors
+.xsession-errors.old
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~"r*"{print $NF}'[C[C[1P[1P[1@r
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~"r"{print $NF}'[1P[1@r[1@o[1@o[1@t
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~"root"{print $NF}'[C[1P[1P[1P[1P[1P[1P[1@/[1@r[1@/[1@*
+1036
+.
+..
+.15.py.swp
+.AndroidStudio2.1
+.AndroidStudio2.2
+.ICEauthority
+.Xauthority
+.a.sh.swp
+.android
+.apport-ignore.xml
+.bash_history
+.bash_logout
+.bashrc
+.bashrc.swp
+.cache
+.codeblocks
+.compiz
+.conda
+.config
+.dbus
+.dmrc
+.emulator_console_auth_token
+.gconf
+.gitconfig
+.gksu.lock
+.gnome2
+.gnome2_private
+.gnupg
+.gradle
+.greedy_tree.cpp.swo
+.gvfs
+.idlerc
+.ipynb_checkpoints
+.ipython
+.java
+.jupyter
+.lantian.swp
+.lesshst
+.local
+.main.c.swp
+.mozilla
+.mycli-history
+.mycli.log
+.myclirc
+.mysql_history
+.nim.py.swp
+.nothing.py.swp
+.nothing.swp
+.oracle_jre_usage
+.pam_environment
+.po
+.presage
+.profile
+.python-eggs
+.python.py.swp
+.python_history
+.pythonuu.pyy.swp
+.remarkable
+.rnd
+.rpmdb
+.sogouinput
+.some.cpp.swp
+.some.py.swn
+.some.py.swo
+.some.py.swp
+.somehting.swp
+.something.cpp.swm
+.something.cpp.swn
+.something.cpp.swo
+.something.cpp.swp
+.something.swn
+.something.swo
+.something.swp
+.sort.cpp.swp
+.ssh
+.sudo_as_admin_successful
+.swf
+.swg
+.swh
+.swi
+.swj
+.swk
+.swl
+.swm
+.swn
+.swo
+.swp
+.test.cpp.swp
+.thunderbird
+.true.swp
+.vim
+.viminfo
+.vimrc
+.vmware
+.wget-hsts
+.xinputrc
+.xsession-errors
+.xsession-errors.old
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~/r*/{print $NF}'[1P[C[C[1@.[1@*
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~/r.*/{print $NF}'[C[1P[1@l
+.
+.15.py.swp
+.AndroidStudio2.1
+.AndroidStudio2.2
+.ICEauthority
+.Xauthority
+.a.sh.swp
+.android
+.apport-ignore.xml
+.bash_history
+.bash_logout
+.bashrc
+.bashrc.swp
+.cache
+.codeblocks
+.compiz
+.conda
+.config
+.dbus
+.dmrc
+.emulator_console_auth_token
+.gconf
+.gitconfig
+.gksu.lock
+.gnome2
+.gnome2_private
+.gnupg
+.gradle
+.greedy_tree.cpp.swo
+.idlerc
+.ipynb_checkpoints
+.ipython
+.java
+.jupyter
+.lantian.swp
+.lesshst
+.local
+.main.c.swp
+.mozilla
+.mycli-history
+.mycli.log
+.myclirc
+.mysql_history
+.nim.py.swp
+.nothing.py.swp
+.nothing.swp
+.oracle_jre_usage
+.pam_environment
+.po
+.presage
+.profile
+.python-eggs
+.python.py.swp
+.python_history
+.pythonuu.pyy.swp
+.remarkable
+.rnd
+.rpmdb
+.sogouinput
+.some.cpp.swp
+.some.py.swn
+.some.py.swo
+.some.py.swp
+.somehting.swp
+.something.cpp.swm
+.something.cpp.swn
+.something.cpp.swo
+.something.cpp.swp
+.something.swn
+.something.swo
+.something.swp
+.sort.cpp.swp
+.ssh
+.sudo_as_admin_successful
+.swf
+.swg
+.swh
+.swi
+.swj
+.swk
+.swl
+.swm
+.swn
+.swo
+.swp
+.test.cpp.swp
+.thunderbird
+.true.swp
+.vim
+.viminfo
+.vimrc
+.vmware
+.xinputrc
+.xsession-errors
+.xsession-errors.old
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '$3~/l.*/{print $NF}'r[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@"root"[C[C[C[C[C[C[C[C[C[C[C[C[3P[C[C[C[C[C[C[C[C[C[C[C[C[C[1@*[C[C[C[C[C[C[C[C[C[C[C[C[Cl[C[C[C[C[C[C[C[C[C[C[C[C[C[Cro[C[C[C[C[C[C[C[C[C[C[C[C[C[2@ot[C[C[C[C[C[C[C[C[C[C[C[C[C[1@==[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/root/[C[C[C[C[C[C[C[C[C[C[C[C[1@{/root/ [C[C[C[C[C[C[C[C[C[C[C[10@if($3 == /root/)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1@~
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{if($3 ~ /root/) print $NF}'[C[C[C[C[C[C[1P[1P[1P
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ 。[Kls ~/ -la | awk '{if($3 ~ /r/) print $NF}'[1@.[1@*
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{if($3 ~ /r.*/) print $NF}'[1P[1@l
+.
+.15.py.swp
+.AndroidStudio2.1
+.AndroidStudio2.2
+.ICEauthority
+.Xauthority
+.a.sh.swp
+.android
+.apport-ignore.xml
+.bash_history
+.bash_logout
+.bashrc
+.bashrc.swp
+.cache
+.codeblocks
+.compiz
+.conda
+.config
+.dbus
+.dmrc
+.emulator_console_auth_token
+.gconf
+.gitconfig
+.gksu.lock
+.gnome2
+.gnome2_private
+.gnupg
+.gradle
+.greedy_tree.cpp.swo
+.idlerc
+.ipynb_checkpoints
+.ipython
+.java
+.jupyter
+.lantian.swp
+.lesshst
+.local
+.main.c.swp
+.mozilla
+.mycli-history
+.mycli.log
+.myclirc
+.mysql_history
+.nim.py.swp
+.nothing.py.swp
+.nothing.swp
+.oracle_jre_usage
+.pam_environment
+.po
+.presage
+.profile
+.python-eggs
+.python.py.swp
+.python_history
+.pythonuu.pyy.swp
+.remarkable
+.rnd
+.rpmdb
+.sogouinput
+.some.cpp.swp
+.some.py.swn
+.some.py.swo
+.some.py.swp
+.somehting.swp
+.something.cpp.swm
+.something.cpp.swn
+.something.cpp.swo
+.something.cpp.swp
+.something.swn
+.something.swo
+.something.swp
+.sort.cpp.swp
+.ssh
+.sudo_as_admin_successful
+.swf
+.swg
+.swh
+.swi
+.swj
+.swk
+.swl
+.swm
+.swn
+.swo
+.swp
+.test.cpp.swp
+.thunderbird
+.true.swp
+.vim
+.viminfo
+.vimrc
+.vmware
+.xinputrc
+.xsession-errors
+.xsession-errors.old
+Algorithm
+Android-develop-tools
+AndroidStudioProjects
+C++
+Download
+Eg.desktop
+File
+IDLE_COLLECTION
+Kali
+Leetcode
+MV
+Music
+MyReport
+PSCA
+Public
+Template
+anaconda2
+desktop
+example-content
+photo
+vmware
+桌面
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ~/ -la | awk '{if($3 ~ /l.*/) print $NF}'[C[1P[1P[C[1P[1@=[1@=[C[C[C[C[C[1P[1P[1P[1P[1P[1@"[1@"[1@r[1@o[1@o[1@t
+..
+.gvfs
+.wget-hsts
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls C++
+ls: cannot access 'C++': No such file or directory
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls C++.C++/C++
+ls: cannot access './C++': No such file or directory
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ LS
+The program 'LS' is currently not installed. To run 'LS' please ask your administrator to install the package 'sl'
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls
+AWK - Introduction.ipynb  lantian  typescript
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../C++
+ls: cannot access '../C++': No such file or directory
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../C++[C/C++./C++./C++
+ls: cannot access '../../C++': No such file or directory
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls
+AWK - Introduction.ipynb  lantian  typescript
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../C++.C++.C++/C++
+ls: cannot access '../../../C++': No such file or directory
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../C++.C++.C++/C++
+[0m[01;34mGMFTBY_WHEEL[0m  [01;34mOOP_COURSE[0m
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ | awk ""{"}"[C[C[C[K[K[K[K[K[K[K[K[K[K-la
+total 16
+drwxrwxr-x  4 lantian lantian 4096 May 16 22:14 [0m[01;34m.[0m
+drwxr-xr-x 55 lantian lantian 4096 May 20 13:05 [01;34m..[0m
+drwxrwxr-x  4 lantian lantian 4096 Apr 15 12:47 [01;34mGMFTBY_WHEEL[0m
+drwxrwxr-x  7 lantian lantian 4096 May 16 22:14 [01;34mOOP_COURSE[0m
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la[K[K[K| awk ''{'}'${}'1{}'~{}'/{}'/{}'[C[Cp}'r}'i}'n}'t}' }'$}'0}'[C[C[1@d[1@r[1@w[1@x[1@r[1@w
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ | awk '$1~/drwxrw/{print $0}'[1@*
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ | awk '$1~/drwxrw*/{print $0}'[C[C[1P[1@=[1@=
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ | awk '$1==/drwxrw*/{print $0}'[C[1P[1P[1@~[C[C[C[C[C[C[C[C[1P[1@.[C[1@/[1P[1@*
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ | awk '$1~/drwxrw.*/{print $0}'[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[1P}'1}'
+GMFTBY_WHEEL
+OOP_COURSE
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ | awk '{print $1}'[1@-[1@l[1@a[1@ [C[C[C[C[C[C[C[1@$[1@1[1@~[1@/[1@/[1@d[1@r[1@w[1@x[1@r[1@w
+drwxrwxr-x
+drwxrwxr-x
+drwxrwxr-x
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1~/drwxrw/{print $1}'[1P}'N}'F}'
+.
+GMFTBY_WHEEL
+OOP_COURSE
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1~/drwxrw/{print $NF}'[C[C[C[C[C[1@.[1@*
+.
+GMFTBY_WHEEL
+OOP_COURSE
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1~/drwxrw.*/{print $NF}'[1P[1P[1P
+.
+..
+GMFTBY_WHEEL
+OOP_COURSE
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1~/drwxr/{print $NF}'[1@.[1@*
+.
+..
+GMFTBY_WHEEL
+OOP_COURSE
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1~/drwxr.*/{print $NF}'[1P[1@=[1@=
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1==/drwxr.*/{print $NF}'[1P[1@"[C[1P[1@"
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1=="drwxr.*"{print $NF}'[1P[1P
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1=="drwxr"{print $NF}'[C[1@W[1@X[1@R[1@-[1@X[1P[1P[1P[1P[1P[1@w[1@x[1@r[1@-[1@x[C[1@ [C[1P
+.
+GMFTBY_WHEEL
+OOP_COURSE
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ ls ../../../../C++ -la | awk '$1=="drwxrwxr-x"{print $NF}'[C[C[1P[1@-
+..
+]0;lantian@GMFTBY: ~/File/Study Coding/Linux/AWKlantian@GMFTBY:~/File/Study Coding/Linux/AWK$ exit
+exit
+
+Script done on Sat May 20 14:06:10 2017
