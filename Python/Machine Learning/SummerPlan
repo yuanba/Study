@@ -1,22 +1,20 @@
 7 : 
-[*] 1.Python科学计算 : Pandas before               7.25 - 7.29
+[*] 1.Python科学计算 : Pandas before               7.25 - 7.31
 [&] 2.Python机器学习实战 : kNN                     &&&& - &&&&
-[*] 3.MIT : 微积分 + 线性代数                      7.25 - 7.31
 
 8 :
-[-] 机器学习实战 Over 3                            ...  -  ...
-[-] Python科学计算 Over 4                          8.6  -  8.10
-[-] ABS (Advance Bash Script) 学习bash脚本编程 1   8.10 -  8.15
-[-] Python基础教程结束                             8.10 -  8.15
-[-] 完成一篇向科幻世界的投稿                       8.25 ~  ...
-[-] Linux 基础 , Linux 服务器 2                    8.10 -  8.20
+[-] 机器学习实战 Over 3                               1
+[-] Python科学计算 Over 4                             1 
+[-] ABS (Advance Bash Script) 学习bash脚本编程 1      2
+[-] Python基础教程结束                                3
+[-] 完成一篇向科幻世界的投稿                          4
+[-] Linux 基础 , Linux 服务器 2                       2
 
 Note : 
     1.记录笔记，方便之后忘的内容快速的回忆
     2.相关课程晚上学习并记录笔记 19:00 - 23:00
         线性代数
-        单变量微积分
-        多变量微积分
+        剩下的数学知识慢慢的补充
     3.8月学习主要工作:
         1.ABS
         2.Linux Fundamention and Sever

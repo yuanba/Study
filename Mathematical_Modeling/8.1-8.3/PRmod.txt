@@ -1,0 +1,76 @@
+# PR model for the question
+# Define this module to fine the best location of the PR parking
+
+/* the set for the question*/
+set line 'The line of the train';
+set station 'The station of the line';
+
+/* the param which the modeling need */
+param v1;     # the speed of the public transforming.
+param v2;     # the speed of the private transforming.
+param Q{i in line , j in station};    # the under needing of the station.
+param a;      # the costing of late (public v.s. private)
+param alpha;     # the old cost of the private
+param beta;    # the pollution cost of the private
+param D{i in line , j in station};    # the distance from pos to the destiantion
+param P;    # the constraints of the number of the parking.
+param R;    # the R of thr circle which the park cover.
+param L;    # the large size of the number of the station in one line.
+param S;    # the constraints which is important
+param F;    # the cost for parking the car.
+
+/* the variables */
+var X {i in line , j in station} binary;     # 1 - choose , 0 - unchoose , X is binary.
+
+/* Objective functions */
+maximize z : sum{i in line} (sum{j in station} Q[i,j] * D[i,j] * X[i,j]);
+
+/* constraints */
+
+s.t. IMC{i in line} : sum{j in station} X[i,j] <= R; 
+
+s.t. LC : sum{i in line , j in station} X[i,j] <= P;    # the number of the parking must less than the constraints P.
+
+s.t. ER : sum{i in line , j in station} X[i,j] >= 1;    # At least choose one place to create the parking , the exist constraints.
+
+s.t. NR{i in line , j in station} : (D[i,j] * X[i,j]) <= 9999;   # Avoid to choose no staion location.
+
+s.t. IR{i in line , j in station} : F <= a * (D[i,j] / v1 - D[i,j] / v2) + D[i,j] * (alpha + beta);    # the most important constraints of this modeling.
+
+
+
+/* Data section */
+/* The test data for my modeling */
+/*
+data;
+
+set line := one two three;   # Three train for the test-data.
+set station := 1 2 3 4 5;    # Five station in one line (largest).
+
+param S := 10000;
+param L := 5;
+param R := 8;
+param P := 12;
+param D :one      two      three :=
+1        18.52    15.05    20.75
+2        12.64    10.67    16.45
+3        12.25    13.85    13.77
+4        17.99    10000    14.25
+5        10000    10000    17.24;
+
+param Q :one      two      three :=
+1        92       103      101
+2        77       128      168
+3        111      139      112
+4        122      0        124
+5        0        0        135;
+
+param v1 := 50;
+param v2 := 30;
+param alpha := 1.5;
+param beta := 1;
+param a := 80;
+param F := 3;
+*/
+
+end;

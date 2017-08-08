@@ -1,0 +1,46 @@
+/* Data section */
+/* The test data for my modeling */
+
+data;
+
+set line := 1 2 3;   # Three train for the test-data.
+set station := 1 2 3 4 5;    # Five station in one line (largest).
+
+param S := 10000;
+param L := 5;
+param R := 2;
+param P := 12;
+param D :1      2      3      4      5 :=
+1      18.52  12.64  12.25  17.99  10000
+2      15.05  10.67  13.85  10000  10000
+3    20.75  16.45  13.77  14.25  17.24;
+
+param Q :1      2      3      4      5 :=
+1      92     77     111    122    0
+2      103    128    139    0      0
+3    101    168    112    124    135;
+
+/*
+param D :one      two      three :=
+1        18.52    15.05    20.75
+2        12.64    10.67    16.45
+3        12.25    13.85    13.77
+4        17.99    10000    14.25
+5        10000    10000    17.24;
+
+param Q :one      two      three :=
+1        92       103      101
+2        77       128      168
+3        111      139      112
+4        122      0        124
+5        0        0        135;
+*/
+
+param v1 := 50;
+param v2 := 30;
+param alpha := 1.5;
+param beta := 1;
+param a := 80;
+param F := 3;
+
+end;
