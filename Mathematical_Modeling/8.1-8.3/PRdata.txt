@@ -3,44 +3,28 @@
 
 data;
 
-set line := 1 2 3;   # Three train for the test-data.
+set line := 1;   # Three train for the test-data.
 set station := 1 2 3 4 5;    # Five station in one line (largest).
 
 param S := 10000;
 param L := 5;
-param R := 2;
-param P := 12;
+param R := 3;
+param P := 3;
 param D :1      2      3      4      5 :=
-1      18.52  12.64  12.25  17.99  10000
-2      15.05  10.67  13.85  10000  10000
-3    20.75  16.45  13.77  14.25  17.24;
+1        21.2   25.2   27.3   30.7   31.8;
 
 param Q :1      2      3      4      5 :=
-1      92     77     111    122    0
-2      103    128    139    0      0
-3    101    168    112    124    135;
+1        107.2  75.4   81.6   120.3  90.1;
 
-/*
-param D :one      two      three :=
-1        18.52    15.05    20.75
-2        12.64    10.67    16.45
-3        12.25    13.85    13.77
-4        17.99    10000    14.25
-5        10000    10000    17.24;
-
-param Q :one      two      three :=
-1        92       103      101
-2        77       128      168
-3        111      139      112
-4        122      0        124
-5        0        0        135;
-*/
-
+param N :1      2      3      4      5 :=
+1        210.51  260.32  250.21  251.30  270.11;  
 param v1 := 50;
 param v2 := 30;
 param alpha := 1.5;
 param beta := 1;
 param a := 80;
 param F := 3;
+param C1 := 0.29;
+param C0 := 0.1;
 
 end;
