@@ -16,7 +16,7 @@ with open("file_name" , mode = 'r' , buffering = -1) as f:
     # Other lines to execute
 ```
 
-* 小文件读取的时候，可以采用如下的形式进行读取，其中注意小文件size可以湖绿，但是大文件容易出现内存不足的情况
+* 小文件读取的时候，可以采用如下的形式进行读取，其中注意小文件size可以忽略，但是大文件容易出现内存不足的情况
 
   这时候我们通常对文件对象进行迭代处理，当然如果是文本文件我们还可以使用readline()逐行获取
 
@@ -42,7 +42,7 @@ with open("file_name" , mode = 'r' , buffering = -1) as f:
 * os.name:系统的名称标识 - 'posix - linux'
 * os.rename(old , name):文件或者目录重命名
 * os.makedirs(''):创建一个多级目录
-* os,mkdir(''):创建单个目录
+* os.mkdir(''):创建单个目录
 * os.stat(file):获取文件属性
 * os.chmod(file)
 * os.path.getsize(file):获取文件大小
@@ -127,24 +127,23 @@ p1.start()
 p1.join()　　　　# p1进程结束后，父进程就可以继续运行了
 p2.start()
 print("End")
-
 ```
 
 ​		2.Pool类：
 
-​			我们在进程少的时候，完全可以使用Process动态的产生多个进程来运行，但是这样的话，我们就没有办法去限制同一时间内的运行着的进程的数目，这时										候我们采用进程池的概念，Pool正式这样一个描述进程池的对象,**	池中的每一个进程的任务函数都是一样的**
+​			我们在进程少的时候，完全可以使用Process动态的产生多个进程来运行，但是这样的话，我们就没有办法去限制同一时间内的运行着的进程的数目，这时										候我们采用进程池的概念，Pool正是这样一个描述进程池的对象,**池中的每一个进程的任务函数都是一样的**
 
-​			如果池还没满，我们就可以一直往里面添加运行的子进程，对预留队列进行阻塞。可以设置最大的运行子进程的上限，只有当翅中的子进程数目小于预定的最大值的时候我们的列表中的下一个子进程才可以继续的加入pool中
+​			如果池还没满，我们就可以一直往里面添加运行的子进程，对预留队列进行阻塞。可以设置最大的运行子进程的上限，只有当池中的子进程数目小于预定的最大值的时候我们的列表中的下一个子进程才可以继续的加入pool中
 
 ​			1.pool.apply_async(run_function , args = (,)):非阻塞的添加我们的子进程进入我们的池中
 
 ​				**该方法返回一个对象，该对象的get方法可以获取run_function函数的执行返回值**
 
-​			2.pool.apply(function , args = (,):阻塞的添加子进程到池中
+​			2.pool.apply(function , args = (,)):阻塞的添加子进程到池中
 
 ​			3.pool.close():停止向池中添加子进程
 
-​			4.pool.join():进程阻塞，父进程等待池中的所有的子进程执行完毕才可以执行,注意只有在执行了close之后才可以阻塞
+​			4.pool.join():进程阻塞，父进程等待池中的所有的子进程执行完毕才可以执行,**注意只有在执行了close之后才可以阻塞**
 
 ```python
 import os
@@ -165,16 +164,15 @@ print("Current append done.")
 p.close()
 p.join()
 print("End")
-
 ```
 
 ​		3.Queue类 - 多进程通信：
 
-​			既然一个父进程下有了很多的子进程，那么子进程之间的通信就是必不可少的事情了，Python的multiprocessing模块提供了很多的进程间通信的的方法，这里先讲解Queue，Queue是一个多进程安全的队列，可以使用Queue进行多进程之间的数据传递
+​			既然一个父进程下有了很多的子进程，那么子进程之间的通信就是必不可少的事情了，Python的multiprocessing模块提供了很多的进程间通信的的方法，这里先讲解Queue，Queue是一个**多进程安全(跨进程)**的队列，可以使用Queue进行多进程之间的数据传递
 
 ​			1.put(instance , blocked , timeout):instance是传递的数据，blocked是否阻塞，timeout是阻塞时长。如果不阻塞且此时队列已满会返回满异常，如果阻塞的时长超过了还没有空余，会返回满异常
 
-​			2.get(blocked,timeout):读取删除一个元素,不阻塞，队列不空立即获取一个，为空返回一个空异常。如果阻塞，如果队列阻塞完之后还是空，返回控异常，否则就会取走一个数据并删除。
+​			2.get(blocked,timeout):读取删除一个元素,不阻塞，队列不空立即获取一个，为空返回一个空异常。如果阻塞，如果队列阻塞完之后还是空，返回空异常，否则就会取走一个数据并删除。
 
 ```python
 import os
@@ -205,9 +203,8 @@ if __name__ == "__main__":
     writer2.start()
     reader.start()
     writer2.join()     # When I ignore the writer.join,the father processing will end when then writer2 is end and ignore the writer1.只有writer2阻塞了主进程
-    reader.terminate()    # 读进程因为死循环所以要认为强行终止父进程才会结束
+    reader.terminate()    # 读进程因为死循环所以要认为强行终止父进程才会结束，否则会一直在等待该reader子进程结束主进程才会结束
     print("End...")
-
 ```
 
 ​		4.Pipe - 两个进程的通信:
@@ -244,7 +241,7 @@ if __name__ == "__main__":
     pipe = Pipe()
     p1 = Process(target = send , args = (pipe[0] , ['url_' + str(i) for i in range(10)]))
     p2 = Process(target = recv , args = (pipe[1] , ))
-    p1.join()    # 父进程阻塞到发信子进程结束
+    p1.join()    # 父进程阻塞到发信子进程结束，意味着发信子进程结束后主进程马上就要执行下一条语句结束进程
     p2.terminate()    # 读进程只能强行终止
 ```
 
