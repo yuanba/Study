@@ -298,55 +298,139 @@
 
 10. 内置图片和文件的链接下载方式
 
-    我们经常毁约到一种情况就是:吉祥谣爬取页面还想要爬取整个页面上的部分图片或者文件，为了应对这种情况，我们可以采用上面说过的构建新的Request的方案，但是scrapy内部提供了一套更加成熟和安全的体系去实现这个任务
+   我们经常毁约到一种情况就是:吉祥谣爬取页面还想要爬取整个页面上的部分图片或者文件，为了应对这种情况，我们可以采用上面说过的构建新的Request的方案，但是scrapy内部提供了一套更加成熟和安全的体系去实现这个任务
 
-    **这就涉及到两种特殊的Item Pipeline**
+   **这就涉及到两种特殊的Item Pipeline**
 
-    * 避免重复下载
-    * 制定存储位置
-    * 缩略图(图片)
-    * 图片格式指定(图片)
-    * 检测图片的大小限制(图片)
+   * 避免重复下载
+   * 制定存储位置
+   * 缩略图(图片)
+   * 图片格式指定(图片)
+   * 检测图片的大小限制(图片)
 
-    这两种Item Pipeline会在内部为要下载图片或者文件预留一个队列(避免了不同的Item相同内容的重复下载)
+   这两种Item Pipeline会在内部为要下载图片或者文件预留一个队列(避免了不同的Item相同内容的重复下载)
 
-    1. FilePipeline
+   1. FilePipeline
 
-       * Spider处理中，把Item的文件的URL放入file_urls序列中
-       * Item进入Item Pipeline
-       * Item进入FilePIpeline中，file_urls中的URL被引擎抓取送给调度器和下载器(不在正规的Scrapy流程中，这意味着小调度器和下载器及其中间件是可以重复使用的)下载
-       * 如果文件的下载更优先会优先执行下载(插队) 对应的Item会在文件下载中被锁住知道下载完成
-       * 文件下载完成之后,Item中的files会被更新(下载后队列),如果下载失败则不会跟新到files中
+      * Spider处理中，把Item的文件的URL放入file_urls序列中
+      * Item进入Item Pipeline
+      * Item进入FilePIpeline中，file_urls中的URL被引擎抓取送给调度器和下载器(不在正规的Scrapy流程中，这意味着小调度器和下载器及其中间件是可以重复使用的)下载
+      * 如果文件的下载更优先会优先执行下载(插队) 对应的Item会在文件下载中被锁住知道下载完成
+      * 文件下载完成之后,Item中的files会被更新(下载后队列),如果下载失败则不会跟新到files中
 
-    2. ImagePipeline类似处理
+   2. ImagePipeline类似处理
 
-       但是对于图片，可以导入Pillow库使用pillow对图片处理的方式
+      但是对于图片，可以导入Pillow库使用pillow对图片处理的方式
 
-    3. 注册：
+   3. 注册：
 
-       一样的，FilePipeline和ImagePipeline都需要在settings.py中被注册才可以使用
+      一样的，FilePipeline和ImagePipeline都需要在settings.py中被注册才可以使用
 
-       ```python
-       # settings.py中需要的设置
-       ITEM_PIPELINES = {
-         'scrapy.pipelines.files.FilesPipeline' : 1,
-       }    #　处理的优先级高一些比较好，先处理这个数据处理流
+      ```python
+      # settings.py中需要的设置
+      ITEM_PIPELINES = {
+        'scrapy.pipelines.files.FilesPipeline' : 1,
+      }    #　处理的优先级高一些比较好，先处理这个数据处理流
 
-       FILES_STORE = ""    #　文件存储的位置
-       FILES_URLS_FIELD = "file_urls"    #　文件URL在Item中的存储的域
-       FILES_RESULT_FIELD = "files"    # 文件URL下载成功后的记录信息在Item中的域
+      FILES_STORE = ""    #　文件存储的位置
+      FILES_URLS_FIELD = "file_urls"    #　文件URL在Item中的存储的域
+      FILES_RESULT_FIELD = "files"    # 文件URL下载成功后的记录信息在Item中的域
 
-       FILES_EXPIRES = 30   #　还可以设置文件的过期时间
+      FILES_EXPIRES = 30   #　还可以设置文件的过期时间
 
-       # 同时在Item中也需要添加两个域
-       file_urls = scrapy.Field()
-       files = scrapy.Field()
+      # 同时在Item中也需要添加两个域
+      file_urls = scrapy.Field()
+      files = scrapy.Field()
 
-       # 针对ImageFilepPipeline的特性
-       IMAGES_THUMBS = {
-         "small" : (50 , 50),
-         "big" : (270,270),
-       }    #设置不同的图片的规模的大小，对原图生成big和small备份
-       ```
+      # 针对ImageFilepPipeline的特性
+      #　该特性需要Pillow库的支持
+      IMAGES_THUMBS = {
+        "small" : (50 , 50),
+        "big" : (270,270),
+      }    #设置不同的图片的规模的大小，对原图生成big和small备份
 
-       ​
+      #　对Spider的重写
+      def parse(self , response):
+              papers = response.xpath('.//*[@class="day"]')
+              for paper in papers:
+                  url = paper.xpath('.//*[@class="postTitle"]/a/@href').extract()[0]
+                  title = paper.xpath('.//*[@class="postTitle"]/a/text()').extract()[0]
+                  time = paper.xpath('.//*[@class="dayTitle"]/a/text()').extract()[0]
+                  content = paper.xpath('.//*[@class="postCon"]/div/text()').extract()[0]
+                  item = CnblogsItem(url = url , title = title , time = time , content = content)
+                  request = scrapy.Request(url = url , callback = self.parse_body) 
+                  # 处理正文
+                  request.meta['item'] = item    # 这里的meta的意思是，将我们处理的本次item当做下次请求的原信息，并且统一提交Item和request
+                  # 需要注意的是，我们下面可以看到，该请求对应的响应也是存在这个元信息的，只需要meta调出即可，目的在于我们上次的数据信息作为下次数据提取的凭证或者条件
+                  yield request
+              next_page = Selector(response).re(r'<a href="(\S*)">下一页</a>')    # \S非空白字符,只有选扎起才可以使用正则
+              if next_page :     # 还存在下一页继续翻页
+                  yield scrapy.Request(url = next_page[0] , callback = self.parse)
+          def parse_body(self , response):
+              item = response.meta['item']
+              body = response.xpath(".//*[@class='postBody']")
+              item['image_urls'] = body.xpath(".//img//@src").extract()   #　刚好也是返还列表
+              yield item    # 下载图片没有必要生成新的request,秩序哟返还Item到Item Pipeline即可
+
+      ```
+
+   4. 上述的方法是针对我们的默认的FilePipeline和ImagePipeline但是我们有时候仍然需要自定义这两个数据处理流
+
+      * 方法：
+
+        继承两个类重写get_media_requiest / item_completed()方法
+
+        ```python
+        # get_media_requests(item , info)
+        # 该方法将Item中的对应的要下载的文件或者图片的URL手动打包成请求发送给调度器
+        def get_media_requests(self , item , info):
+            for image_url in item['image_urls']:
+                yield scrapy.Request(url = image_url)
+        #　该方法的返回值是item和二元元组的列表
+        # 下载成功是True否则是False,下载成功时，checksum是下载文件的MD5哈希，path是文件的存储地址，url是文件的URL,失败则直接使用Failure()异常
+        [
+          (True ,
+           {
+             'checksum' : ...,
+             'path' : ...,
+             'url' : ...
+           }
+          ),
+          (False , Failure(...)
+          )
+        ]
+
+        # item_completed(result , item , info)
+        #　当一个Item的所有的文件连接全部都处理之后(成功或者失败)就会调用该方法
+        # 该方法的输出是一个Item / DropItemDU异常传到之后的数据处理流中
+        ```
+
+        定制整个子类
+
+        ```python
+        from scrapy.pipelines.images import ImagesPipeline    # 这是最新版scrapy的导入方式
+
+        class myimagepipeline(ImagesPipeline):
+            def get_media_requests(self , item , info):
+                for image_url in item['image_urls']:
+                    yield scrapy.Request(url = image_url)
+            def item_completed(self ,results , item , info):
+                image_paths = [x['path'] for ok , x in results if ok]
+                if not image_paths:
+                    raise DropItem("Item is nothing.")
+                item['images'] = image_paths    # 下载后的完成队列的添加
+                return item
+        # 我们需要知道最后我们还是需要在settings.py中对我们的定制的类进行设定 cnblogs.pipelines.myimagepipeline : ...
+        ```
+
+11. 启动爬虫
+
+    * 在命令行中使用crawl进行项目的启动
+
+    * 支持单进程多爬虫
+
+      ```python
+
+      ```
+
+      ​
