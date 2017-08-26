@@ -85,6 +85,7 @@ ps -al --forest    # 详细信息打印
 
    ```bash
    kill -9 PID    # 强行杀死进程 
+   kill %num    # 按照作业号杀死后台作业
    ```
 
 3. killall
