@@ -685,7 +685,7 @@ select * from table_name where ... ;  # 查询操作
 
          ```mysql
          # 只能在存储过程中使用
-         declare var_name type    # 在存储过程中定义我们的变量
+         declare var_name type default n   # 在存储过程中定义我们的变量并设定默认值是n
          set var_name = ...    # 设定变量的值
          ```
 
@@ -720,5 +720,115 @@ select * from table_name where ... ;  # 查询操作
          delimiter ;
          ```
 
-### 函数和触发器
+### 9 函数和触发器
 
+#### 存储函数
+
+**除了存储过程之外，MySQL还支持用户自定义存储函数**
+
+除了MySQL中自定义的多功能函数之外，自定函数也是一种单功能处理机制(第3节SQL中已经介绍了一批数据库函数)
+
+1. 定义存储函数
+
+   ```mysql
+   # 阶乘函数
+   delimiter //
+   create function f_factorial(p int) returns int
+   begin
+       declare result int default 1;
+       while result > 1 do
+           set result = result * p;
+           set p = p - 1
+       end while;
+       return result;
+   end
+   //
+   delimiter ;
+   # 存储函数和存储过程很像，但是不存在输出参数，只需要用returns指定函数的返回值，在最后需要return一下，其实和标准的程序设计语言是一个套路
+   ```
+
+2. 查看存储函数
+
+   ```mysql
+   show function status \G    # 检查当下所有的存储函数
+   show create function function_name    # 检查对应的存储函数的性质　
+   ```
+
+3. 调用存储函数
+
+   ```mysql
+   # 和存储过程不同，存储函数可以直接调用
+   select f_factorial(5);
+   #　结果
+   +----------------+
+   | f_factorial(5) |
+   +----------------+
+   |            120 |
+   +----------------+
+   ```
+
+
+#### 触发器
+
+1. 出发器是针对数据库的特殊的存储过程，他的触发条件并不是调用而是**事件触发**
+
+2. 触发器本质上实现了对表操作的自动化管理
+
+3. 触发器基本语法
+
+   ````mysql
+   delimiter //
+   create trigger trigger_name before / after [insert , update , delete , ...]
+   on table_name for each row [ for each statement ]    #
+   begin
+       SQL ...
+   end
+   //
+   delimiter ;
+   ````
+
+   * 并不是只有`INSERT / UPDATE / DELETE`操作才会进行出发启动，本质上类似的数据更新操作都会引起同样的触发条件
+   * `BEFORE / AFTER`触发条件针对的是我们针对事件的动作执行的先后
+   * `FOR EACH ROW`,表示触发是一行为单位统计的，`FOR EACH STATEMENT`是以语句块为单位进行统计的
+
+4. 确认触发器
+
+   ```mysql
+   show triggers \G    # 显示当前数据库的所有的触发器
+   ```
+
+5. 删除触发器
+
+   ```mysql
+   drop trigger trigger_name;    # 删除触发器
+   ```
+
+#### 游标
+
+1. 游标就是对`SELECT`的查询**集合结果**一个一个记录取出处理的方式
+
+2. 指针 : 指针确定当前的记录的细腻系，内存中保存当前记录的地址位置
+
+3. 使用方式
+
+   ```mysql
+   #　声明游标
+   declare cur_name cursor for select ...    # 声明针对select结果集合的游标
+   # 打开游标
+   # 定义的游标其实并没有实际执行select语句，需要打开游标才可以开始操作
+   open cur_name 
+   # 从游标指针中取出记录
+   # 如果因为异常(比如取空)导致fetch失败我们的比那辆var_name是得不到正确的赋值的
+   fetch cur_name into var_name    # 将记录数据从游标中取出放入变量中
+   fetch cur_name into var1,var2,var3,...    # 记录数据批量取出
+
+   # 游标取出数据的中断处理，定义例外(异常)处理
+   # 针对我们的游标取尽元素的时候，会抛出NOT FOUND异常
+   declare [type] handler for [NOT FOUND] SQL ...     #　SQL语句针对异常的处理的方式
+   # type处理种类决定我们完成异常之后的处理之后如何行动，有两种处理(EXIT / CONTINUE)中断跳出存储过程和继续执行两种情况
+
+   # 关闭游标
+   close cur_name
+   ```
+
+   ​
