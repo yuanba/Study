@@ -831,4 +831,91 @@ select * from table_name where ... ;  # 查询操作
    close cur_name
    ```
 
-   ​
+
+### 10 文件处理
+
+1. 导入数据从文件
+
+   ```mysql
+   load data local infile 'path' into table table_name [type];    # 将外部CSV数据导入到数据库
+   # path使用绝对路劲或者相对路径
+   # 这里非常需要注明，本人亲测 Ubuntu16.04 MySQL 5.7.x 必须使用local关键字才可以成功的到入数据
+   # type 选项,选项可以复用
+   # fields terminated by ';'    　指定CSV文件使用逗号作为分隔符号,默认是\t
+   # lines terminated by '\n'    指定换行符号，默认是\n
+   # ignore n lines    跳过多少行开始读数据，默认是0
+   ```
+
+2. 导出数据到文件
+
+   ```mysql
+   select * into outfile 'path' fields terminated by ',' from table_name;    # 将数据从table_name中导出数据到path制定的护具中
+   # 对与MySQL5.7.x以上的版本中，我们最新导入的新特性 secure_file_priv 会自动的禁止我们的MySQL对文件的导出导入做操作，上面的导入我们已经使用了LOCAL进行解决方案
+   # 我们的解决方案就是
+   #     1. select @@global.secure_file_priv    查看对应的该参数的全局变量的默认的地址
+   #     2. 切换到管理员用户 , 修改MySQLd的my.cnf(/etc/mysql/my.cnf)文件最后的[mysqld]配置，加入secure-file-priv = 'path' , path注意这里使用的是我们制定的存储导入导出的文件路径
+   #     3. 进行完上述的操作之后我们还会发现，使用的导出导入操作会出现mysql用户没有读写权限的问题，这里我们需要对apparmor进行修改，加上对上面制定的path的读写权限
+            vim /etc/apparmor.d/usr.sbin.mysqld 在其中最后加入
+   		 "path/* rw,"    如果使用/home/lantian/*那么之后只要涉及到输出文件必须使用/home/lantian全程，使用~/也会错误
+   #     4. /etc/init.d/apparmor reload    对mysql重新加载配置
+   #     5. service mysql restart     对mysql服务进行重启
+   # 使用完上述的操作命令之后我们就可以争取的执行我们的 select into outfile 操作实现数据库的导出备份
+   ```
+
+3. 执行SQL文件命令
+
+   我们将正确的SQL命令写入文件中，一次性执行节约效率
+
+   ```mysql
+   source path    # 执行外部的文件中的SQL命令，source并不是SQL命令。是引导如的MySQL处理方式
+   ```
+
+4. CLI执行MySQL命令
+
+   ```mysql
+   mysql -u root -p -e "source path ; ..."    # 在CLI中使用数据库文件执行
+   ```
+
+5. 保存MySQL的处理结果记录备份文件
+
+   * 输出重定向(不建议使用，操作见过不显示，有操作危险)
+
+     ```mysql
+     mysql -u root -p > log    # 输出重定向导入
+     ```
+
+   * `tee`和`notee`命令
+
+     ```mysql
+     tee log    # log的path必须在我们的/etc/apparmor.d/usr.sbin.mysqld中写入mysql才有写入的权限
+     notee    # 停止写入，中间的所有的数据都会写入文件中备份一共存有备份检查
+     ```
+
+### 11 数据库备份
+
+1. 数据库备份为了构建损坏的数据库的情况
+
+2. 数据库的转储文件保存的是我们的数据库的创建所需要的SQL语句集合，这是本质，转储的输出就是数据库的本身
+
+3. 应用
+
+   * `mysqldump`
+
+     ```mysql
+     mysqldump -u root -p database_name > save.sql
+     # 查看我们的save.sql我们会发现其实就是我们的SQL构建语句
+     # 设置可以看出使用--做单行注释，/**/是多行注释
+     # 如果转储失败可以使用参数
+     mysqldump -u root -p database_name --default-character-set=utf8 > save.sql
+     ```
+
+   * 回复数据库
+
+     回复数据库首先我们需要手动的创建数据库在导入外部的转储`.sql`文件
+
+     ```mysql
+     mysql -u root -p -e 'create database database_name'    # 创建数据库
+     mysql -u root -p database_name < save.sql    # 将转储的sql文件存储转储copy到我们的database_name数据库中
+     ```
+
+     ​
