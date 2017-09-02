@@ -10,6 +10,17 @@
 
   DBMS对用户不友好,所以我们使用应用程序作为媒介是的用户可以良好的体验到数据库的便利
 
+```bash
+/etc/init.d/mysql stop
+/etc/init.d/mysql start    # 重启mysql和关闭mysql
+```
+
+```mysql
+MySQL的编码问题不支持中文
+使用我们的上述命令关闭之后将所有的配置设置改为utf8格式(show variables like "%char%")之后重启MySQL服务之后
+即可支持中文(之前我们的数据不回复中文，之后改后的支持中文)
+```
+
 ### 2 MySQL细节
 
 1. 必须要在语句后加`;`
@@ -173,6 +184,8 @@
    * length()返回字节数 , concat(),trim(类似python的strip),rand(seed)随机数产生,extract(type from dat)抽取某一个日期具体的时间描述,datediff(dat1,dat2)时间差,MD5(获取哈希值),date_add(date , interval +/-n type)时间加运算
 
    * extract和date_add运算的type类型常用:year , month,day,hour,minute,second
+
+   * now() : 获取当前时间函数
 
    * case语句
 
@@ -784,6 +797,18 @@ select * from table_name where ... ;  # 查询操作
        SQL ...
    end
    //
+   delimiter ;
+
+   # eg:
+   delimiter //
+   create trigger trigger_name after insert on table_name for each row 
+   begin
+       declare num int default 0;    #小心分号的结尾
+       select COUNT(*) into @num from table_name;    # MySQL不支持在触发器中返回数据集，所以我们可以使用select arg1,arg2 into @arg1,@arg2 from ... 的方式给变量赋值
+       if num > 10 then
+           delete from table_name;
+       end if;
+   end //
    delimiter ;
    ````
 
