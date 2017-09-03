@@ -347,70 +347,221 @@
 
 ### 按钮构件
 
-* 一般按钮
+#### 一般按钮
 
-  ```c
-  //创建标签按钮
-  gtk_button_new_with_label();
-  gtk_button_new_with_mnemonic();
-  //空白按钮
-  gtk_button_new();
-  ```
+```c
+//创建标签按钮
+gtk_button_new_with_label();
+gtk_button_new_with_mnemonic();
+//空白按钮
+gtk_button_new();
+```
 
-  ```c
-      #include <stdlib.h>
-      #include <gtk/gtk.h>
-      /* 创建一个新的横向盒,它包含一个图像和一个标签,并返回这个盒。*/
-      GtkWidget *xpm_label_box( gchar *xpm_filename,gchar *label_text )
-      {
-          GtkWidget *box;
-          GtkWidget *label;
-          GtkWidget *image;
-          /* 为图像和标签创建盒 */
-          box = gtk_hbox_new (FALSE, 0);
-          gtk_container_set_border_width (GTK_CONTAINER (box), 2);
-          /* 创建一个图像,利用路径读取 */
-          image = gtk_image_new_from_file (xpm_filename);
-          /* 为按钮创建一个标签 */
-          label = gtk_label_new (label_text);
-          /* 把图像和标签组装到盒子里 */
-          gtk_box_pack_start (GTK_BOX (box), image, FALSE, FALSE, 3);
-          gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 3);
-          gtk_widget_show (image);
-          gtk_widget_show (label);
-          return box;    //将box内部的东西填充完之后就可以实现将box返回(指针)给其他的box或者window
-      }
+```c
+    #include <stdlib.h>
+    #include <gtk/gtk.h>
+    /* 创建一个新的横向盒,它包含一个图像和一个标签,并返回这个盒。*/
+    GtkWidget *xpm_label_box( gchar *xpm_filename,gchar *label_text )
+    {
+        GtkWidget *box;
+        GtkWidget *label;
+        GtkWidget *image;
+        /* 为图像和标签创建盒 */
+        box = gtk_hbox_new (FALSE, 0);
+        gtk_container_set_border_width (GTK_CONTAINER (box), 2);
+        /* 创建一个图像,利用路径读取 */
+        image = gtk_image_new_from_file (xpm_filename);
+        /* 为按钮创建一个标签 */
+        label = gtk_label_new (label_text);
+        /* 把图像和标签组装到盒子里 */
+        gtk_box_pack_start (GTK_BOX (box), image, FALSE, FALSE, 3);
+        gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 3);
+        gtk_widget_show (image);
+        gtk_widget_show (label);
+        return box;    //将box内部的东西填充完之后就可以实现将box返回(指针)给其他的box或者window
+    }
 
-      void callback(GtkWidget* widget , gpointer data)
-      {
-        g_print("Print something to the terminal.");	
-      }
+    void callback(GtkWidget* widget , gpointer data)
+    {
+      g_print("Print something to the terminal.");	
+    }
 
-      int main(int argc , char* argv[])
-      {
-        GtkWidget* window;
-        GtkWidget* box;
-        GtkWidget* button;
+    int main(int argc , char* argv[])
+    {
+      GtkWidget* window;
+      GtkWidget* box;
+      GtkWidget* button;
 
-        gtk_init(&argc,&argv);
-        window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-        gtk_window_set_title(GTK_WINDOW(window) , "Buttons Click!");
+      gtk_init(&argc,&argv);
+      window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+      gtk_window_set_title(GTK_WINDOW(window) , "Buttons Click!");
 
-        box = xpm_label_box("folder" , "folder");
-        button = gtk_button_new();
-        gtk_container_add(GTK_CONTAINER(button) , box);
-        gtk_container_add(GTK_CONTAINER(window) , button);
-        //这样写是一个好习惯
-        g_signal_connect(G_OBJECT(window), "destroy" , G_CALLBACK(gtk_main_quit) ,NULL);
-        gtk_widget_show(box);
-        gtk_widget_show(button);
-        gtk_widget_show(window);
-        gtk_main();
-      }
-  ```
+      box = xpm_label_box("绝对路径" , "folder");
+      button = gtk_button_new();
+      gtk_container_add(GTK_CONTAINER(button) , box);
+      gtk_container_add(GTK_CONTAINER(window) , button);
+      //这样写是一个好习惯
+      g_signal_connect(G_OBJECT(window), "destroy" , G_CALLBACK(gtk_main_quit) ,NULL);
+      gtk_widget_show(box);
+      gtk_widget_show(button);
+      gtk_widget_show(window);
+      gtk_main();
+    }
+```
 
-  信号
+信号
 
-  * clicked : 点击并释放
-  * enter : 鼠标移入显示
-  * leave : 鼠标移出显示
+* clicked : 点击并释放
+* enter : 鼠标移入显示
+* leave : 鼠标移出显示
+
+#### 开关按钮(toggle button)
+
+可以引用在比如**记住密码选项上**
+
+只有开启和关闭两个状态
+
+1. 创建
+
+   ```c
+   GtkWidget *gtk_toggle_button_new( void );
+   GtkWidget *gtk_toggle_button_new_with_label( const gchar *label );
+   GtkWidget *gtk_toggle_button_new_with_mnemonic( const gchar *label );
+   ```
+
+2. 检测
+
+   我们通过读取开关构件的`active`域来检测开关的工作状态
+
+   当我们的开关构件打开的时候会发送`toggled`信号和`clicked`信号，我们可以设置捕获`toggled`的函来处理这个信号
+
+   `eg:`
+
+   ```c
+   //获取开关构件状态
+   void toggle_button_callback (GtkWidget *widget, gpointer data)
+   {
+     if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget)))     //使用宏庄花成开关构件进而判断开关是否打开，函数返回值是开关挡墙的工作状态
+     {
+   	/* 如果运行到这里,开关按钮是按下的 */
+     } 
+     else 
+     {
+   	/* 如果运行到这里,开关按钮是弹起的 */
+     }
+   }
+
+   //设置开关构件状态
+   void gtk_toggle_button_set_active( GtkToggleButton *toggle_button,gboolean is_active );   //该开始默认是FALSE不开启
+   ```
+
+#### 复选按钮
+
+1. 构件特点
+
+   用在应用程序中的切换我们的个选项开关应用中
+
+   * 左边是小方框等，右边是提示文字
+   * 可以多选
+
+2. 创建
+
+   ```c
+   GtkWidget *gtk_check_button_new( void );
+   GtkWidget *gtk_check_button_new_with_label ( const gchar *label );
+   GtkWidget *gtk_check_button_new_with_mnemonic ( const gchar *label );
+
+   gboolean gtk_check_button_get_active(GTK_CHECK_BUTTON(widget));
+   void gtk_check_button_set_active(GtkToggleButton *toggle_button,gboolean is_active );
+   ```
+
+#### 单选按钮
+
+1. 特点
+
+   一个时间点下，只能有一个选项处于选中状态
+
+2. 创建
+
+   ```c
+   GtkWidget *gtk_radio_button_new( GSList *group );
+   GtkWidget *gtk_radio_button_new_from_widget( GtkRadioButton *group );
+   GtkWidget *gtk_radio_button_new_with_label( GSList *group,const gchar  *label );	
+   //我们注意到了调用函数的参数是一个组，这里我们需要解释一下
+   //单选按钮是在一个组里面工作的，一个组里有很多的单选按钮，一次只能在组里选一个
+   //第一添加单选按钮的时候我们的参数是NULL
+   //之后的添加的单选按钮实在组中添加的
+   GSList *gtk_radio_button_get_group( GtkRadioButton *radio_button );　　  //group组是GSList的指针
+   //第一次添加单选按钮之后使用上面的函数获取组，将组作为下一个参数床底给下一个单选按钮，连锁执行
+
+   //或者使用下面的函数方法
+   button2 = gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON (button1), "button2");
+   ```
+
+3. 组里的默认选项设定
+
+   ```c
+   void gtk_toggle_button_set_active( GtkToggleButton *toggle_button,gboolean state );    //设定第几个单选按钮被默认激活
+   ```
+
+### 调整对象
+
+1. 描述
+
+   GTK 用一个调整对象(Adjustment object)解决了这个问题。**调整对象不是构件**,但是为构件提供了一种以抽象、灵活的方法来传递调整值信息。调整对象最明显的用处就是为范围构件(比如滚动条和比例构件)储存配置参数和值。然而,因为调整对象是从 Object 派生的,在其正常的数据结构之外,它还具有一些特殊的功能。最重要的是,它们能够引发信号,就像构件一样,这些信号不仅能够让程序对用户在可调整构件上的输入进行响应,还能在可调整构件之间透明地传播调整值。
+
+2. 适用场合
+
+   * 滚动条
+   * 视角
+   * 滚动窗口
+
+3. 创建
+
+   * 使用调整对象的构件会自动创建
+
+   * 手动创建
+
+     ```c
+     GtkObject *gtk_adjustment_new( gdouble value,    //调整对象的初始值
+     							   gdouble lower,    //调整对象最低取值
+     							   gdouble upper,    //分栏构件参数
+     							   gdouble step_increment,    //改变值的步长
+     							   gdouble page_increment,
+     							   gdouble page_size );
+     ```
+
+4. 使用调整对象
+
+   1. 特点
+
+      * 所有使用调整对象的构件**都可以使用自己的调整对象**,或者使用你创建的调整对象,但是最好让这一类构件都使用它们自己的调整对象。
+      * 前面说过,和其它构件一样,调整对象是 Object 的子类,因而,它也能够引发信号。这也是为什么当滚动条和其它可调整构件共享调整对象时它们能够自动更新的原因。
+
+   2. 使用
+
+      当构件重新配置了它的调整对象的 upper 或 lower 参数时(比如,用户向文本构件添加了更多的文本时),发生了什么?在这种情况下,它会引发一个 changed 信号:
+
+      ```c
+      void (* changed) (GtkAdjustment *adjustment);
+      ```
+
+      范围构件一般为这个信号设置回调函数,构件会改变它们的外观以反映变化。例如,滚动条上的滑块会根据它的调整对象的 lower 和 upper 参数之间的差值的变化而伸长或缩短
+
+5. 范围构件
+
+6. 滚动条构件
+
+   1. 创建
+
+      ```c
+      //参数是NULL的时候默认创建一个调整对象
+      GtkWidget *gtk_hscrollbar_new( GtkAdjustment *adjustment );
+      GtkWidget *gtk_vscrollbar_new( GtkAdjustment *adjustment );    
+      ```
+
+   ​
+
+   ​
+
+   ​
