@@ -297,6 +297,8 @@ select * from table_name where ... ;  # 查询操作
 
    常用的存储引擎就是MyISAM,InnoDB(支持事务处理)，Falcon最为新秀也需要多了解
 
+   **如果Innodb表没有主键，那么系统会默认创建一个内部列作为主键，所以如果可以给表创建一个主键，将可以利用这个优势提高导入数据的效率**
+
 4. 设置存储引擎
 
    1. 查看存储引擎和表的详细信息
@@ -452,18 +454,18 @@ select * from table_name where ... ;  # 查询操作
    create index index_name on table_name(employee_name)    # 建立索引 
    show index from table_name \G   # 查看改表上的所有的索引,一行一个索引，索引的类型默认是B树
    # 索引的显示项目
-   Table         | READRES     #　索引的目标表
-   Non_unique    | 1    # 是否允许重复
-   Key_name      | no_index    # 索引的名字
-   Seq_in_index  | 1    # 索引列序号
-   Column_name   | Rno    # 索引的列名
-   Collation     | A    # 排序方式 ASC / AFTER
-   Cardinality   | 6    # 索引的非重复值的个数,这个由表内数据决定
+   Table         | READRES     　　　　　#　索引的目标表
+   Non_unique    | 1    　　　　　　　　　# 是否允许重复
+   Key_name      | no_index    　　　　　# 索引的名字
+   Seq_in_index  | 1    　　　　　　　　　# 索引列序号
+   Column_name   | Rno    　　　　　　　　# 索引的列名
+   Collation     | A    　　　　　　　　　# 排序方式 ASC / AFTER
+   Cardinality   | 6   　　　　　　　　　 # 索引的非重复值的个数,这个由表内数据决定
    Sub_part      | None 
    Packed        | None
-   Null          | YES    # 是否允许空
-   Index_type    | BTREE    # 索引算法
-   Comment       |     # 备注
+   Null          | YES   　　　　　　　　 # 是否允许空
+   Index_type    | BTREE   　　　　　　　 # 索引算法
+   Comment       |     　　　　　　　　　　# 备注
    Index_comment | 
    # MySQL建立的所以会对主键自动建立聚簇索引
    ```
