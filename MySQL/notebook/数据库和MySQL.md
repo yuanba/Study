@@ -37,7 +37,7 @@ MySQL的编码问题不支持中文
    drop table table_name;    # 删除表
    create database database_name;    # 创建数据库
    use database_name;    # 使用某一个数据库
-   grant all privileges on database_name.* to name@localhost identified by 'xxxxxxx'     # all privileges可以替换成具体的数据库操作,亦可以对数据库的某个表加权限,创建完之后需要退出使用 mysql -u ... -p 登录就可以
+   grant all privileges on database_name.* to name@localhost identified by 'xxxxxxx';     # all privileges可以替换成具体的数据库操作,亦可以对数据库的某个表加权限,创建完之后需要退出使用 mysql -u ... -p 登录就可以
    select database();    # 查看现在使用的是什么数据库
    des table_name;    # 显示建立后的表的结构
 
