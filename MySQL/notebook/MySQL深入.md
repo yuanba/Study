@@ -280,6 +280,131 @@ MySQL Server是由**SQL层**和**存储引擎层组成**的，每一层各自都
 
    2. `db`和`host`表
 
-      db表存储了用户对数据库的操作权限
+      db表存储了用户对数据库的操作权限,host不常用
 
-      ​
+      ```mysql
+      *************************** 1. row ***************************
+                       Host: localhost
+                         Db: performance_schema
+                       User: mysql.session
+                Select_priv: Y    # 选择权限
+                Insert_priv: N    # 插入权限
+                Update_priv: N
+                Delete_priv: N
+                Create_priv: N
+                  Drop_priv: N
+                 Grant_priv: N
+            References_priv: N
+                 Index_priv: N
+                 Alter_priv: N
+      Create_tmp_table_priv: N
+           Lock_tables_priv: N
+           Create_view_priv: N
+             Show_view_priv: N
+        Create_routine_priv: N
+         Alter_routine_priv: N
+               Execute_priv: N
+                 Event_priv: N
+               Trigger_priv: N
+      ```
+
+      * 用户列
+
+        host ,  db , user - 三个字段代表了db表的主键
+
+        ```mysql
+        select * from user \G    # 其中包含了所有的数据库的表的用户，localhost的root和%的root是两个不同的用户
+        # 该命令可以显示数据库的主要的成员的详细信息，其中的信息是针对所有的数据库的
+        ```
+
+   3. 权限的更新
+
+      因为权限的数据量比较小，MySQL在内存中对权限信息进行了缓存，每次修改完权限之后都要`FLUSH PRIVILEGES`更新权限信息
+
+### 账户管理
+
+1. 新建用户
+
+   * 新创建的用户不存在任何权限
+
+   * `CREATE USER`
+
+     ```mysql
+     create user 'user_name'@'%' identified by "xxxxxxx";
+     create user 'user_name'@'%' identified by password "xxxxxxxxxxxxxxxxxxxxxxxx";       # 使用哈希值用来设定密码
+     select password('xxxxxx');    # 显示xxxxxxx的哈希值之后可以插入使用到我们的创建用户中,password库函数用来加密密码
+     ```
+
+
+   * `GRANT`
+
+     因为`CREATE USER`的用户不存在任何权限，我们需要使用`GRANT`对权限进行限定，使用`GRANT`语句必须要有`GRANT`权限
+
+     甚至而已用来生成新用户病赋予相应权限
+
+     ```mysql
+     grant all privileges on database_name.table_name to user@host identified by "password" with grant option;
+     ```
+
+   * 直接操作mysql.user用户表修改
+
+     如果存在`INSERT`权限，可以使用`INSERT`向mysql.user表中插入数据
+
+2. 删除用户
+
+   ```mysql
+   drop user 'name'@'host';     # 删除对应的表中的用户
+   #　还可以使用delete语句来实现，但是需要有对应的权限
+   ```
+
+3. 修改密码
+
+   ```bash
+   # 1
+   mysqladmin -u user_name -p password "xxxxxx"     # 将密码修改为xxxxx
+   # 密码存储在 mysql.user authentication_string字段中，用哈希加密保存
+   # 2
+   (update) + (FLUSH PRIVILEGES)
+   # 3
+   # 在用户登录下,修改用户的密码
+   set password=password("xxxxxx")    # 新密码必须要加密处理
+   ```
+
+4. 丢失密码的处理方式
+
+   1. 进入操作系统超级管理员模式
+
+      ```bash
+      su    # 目的是获取对/etc/mysql中的配置文件的修改权限
+      ```
+
+   2. 在`[mysqld]`下添加
+
+      ```bash
+      skip-grant-tables    # 忽略权限表的验证机制，使用操作系统root用户登录
+      ```
+
+   3. 重启mysql服务
+
+      ```bash
+      /etc/init.d/mysql restart
+      ```
+
+   4. 进入mysql
+
+      ```bash
+      mysql -u root    # 无需密码即可登录
+      ```
+
+   5. 修改密码
+
+      ```mysql
+      set password=password('xxxxxx')
+      FLUSH PRIVILEGES;    # 刷新权限
+      ```
+
+   6. 恢复配置文件中的选项，注释掉`skip-grant-tables`的设置重新启动mysql服务即可恢复正常
+
+   ​
+
+   ​
