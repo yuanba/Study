@@ -88,4 +88,3 @@ watch    # 动态见识一个变量的值
 break / b file_path:lineno / file_path.c fucntion_name   # 设置断点
 print / p    # 打印指定变量
 ```
-
