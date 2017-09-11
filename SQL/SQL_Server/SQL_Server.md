@@ -1,4 +1,4 @@
-## SQL Server
+## 1 SQL Server
 
 ### SQL Server引擎实例
 
@@ -70,7 +70,7 @@ sa登录是特殊登录，是最高权限登录，需要对密码进行重点的
 
 * 在对象资源管理中断开连接并重新登录，记住重启
 
-## 安全管理
+## 2 安全管理
 
 ### 服务器角色授予登录权限
 
@@ -78,3 +78,113 @@ sa登录是特殊登录，是最高权限登录，需要对密码进行重点的
 2. 可以创建服务器角色并进行权限设定
 3. 将某一个登录添加到一个服务器角色中，该账户登录就继承了而对应的服务器角色的操作权限
 4. 如果不需要对服务器进行管理，一般使用数据库角色进行权限的配置
+
+### 权限不足的操作
+
+如果我们的用户没有相应的操作的权限，在执行数据库的操作的时候会显示我们的操作失败，错误的描述是缺少相应的权限
+
+* 利用sa创建我们的SQL Server账户student
+* 利用student登录我们的SQL Server
+* 利用student账户创建性的登录账户会发现创建失败，缺失权限
+
+### 修改登录服务器的角色集
+
+每一个登录SQL Server的账户都存在一个角色集合，我们在这个集合中可以添加对应的SQL Server的角色权限，对应的额账户就会集成对应的角色的权限，因此修改一个账户的全下你可以使用我们的修改登录服务器的角色集的方式实现
+
+方式
+
+* 对象资源管理器中，在对应的的登录中我们选择安全性的节点在最终的服务器角色选项中我们可以设定对应的服务器角色
+
+* SQL 语句实现
+
+  ```mssql
+  --以下语句的执行需要更高的数据库的权限
+  --以下的语句逻辑都是从我们的角色出发的，从我们的角色中删除对应的所加入的成员
+  --对应的sysadmin角色的全显示最高级权限，可以实现所有的对数据库的操作
+  ALTER server role [sysadmin] add memeber [student]	
+  GO
+  --移除操作
+  alter server role [sysadmin] drop member [student]
+  GO
+  ```
+
+### 使用数据库角色授权
+
+* 针我们对用户的权限的分批额在数据库上并不是直接将我们的权限分配给某一次登录
+* 我们讲某一次登录映射到对应的用户上
+* 将用户加入到对应的数据库角色列表中
+* 这样，登录就和具体的用户绑定，具体的用户和具体的数据库角色绑定，从而让我们的登录继承我们的数据库权限
+
+操作:
+
+在执行该操作之前记得讲我们的执行SQL语句的对应的用户的权限加上
+
+1. 利用sa或者windows账户创建新的登录
+
+   ```mssql
+   create login student with password='',default_database=master
+   ```
+
+2. 建立登录和用户的映射
+
+   ```mssql
+   use AdventureWorks;
+   GO
+   --用户stu是现添加的
+   CREATE USER stu for login student;
+   GO
+   ```
+
+3. 用户添加到数据库角色中
+
+   ```mssql
+   use AdventureWorks;
+   GO
+   ALTER ROLE [db_owner] add member stu
+   GO	
+   ```
+
+之后我们的student登录就会成为我们的数据库的拥有者可以执行数据库的相应的操作
+
+### 指定特定对象的权限
+
+必要的概念的理解
+
+* 数据库的对象 : 数据库中的表，视图，索引等等都是我们的数据库对象
+* 数据库服务器角色 : 我们在数据库服务器等级的角色分配是针对**所有的数据库**的**所有的对象的**
+* 使用数据库角色 : 使用数据库角色实际上是对我们的**特定的数据库的所有的对象的权限的**分配
+
+下面我们来讨论如何对特定的数据库的特定的对象进行授权
+
+* 利用sa创建针对数据库AdventureWorks的登录
+
+  ```mssql
+  create login app with password='xxxxxxx' ,default_database=AdventureWorks
+  ```
+
+* 建立登录到用户的映射
+
+  ```mssql
+  use AdventureWorks 
+  go
+  create user stu_user for login app
+  go
+  ```
+
+* 还是使用sa进行操作，打开AdventureWorks数据库在安全性中选择用户，点击我们刚才创建的stu_user用户
+
+  在安全对象选项中使用搜索，点击**特定对象**,添加我们感兴趣的特定数据库对象，然后在我们的下面勾选针对该特定对象的**使用权限**
+
+  还可以继续点击我们的对应的权限针对不同的列设置我们的权限
+
+  也可以使用SQL语句实现
+
+  ```mssql
+  use AdventureWorks
+  go
+  grant select on Person.Address to app
+  grant update on Person.Address(col1,col2,col3) to app as dbo
+  go
+  ```
+
+  ​
