@@ -1,131 +1,144 @@
-#include <iostream>
 #include <stdio.h>
 #include <string.h>
-#include <queue>
-#include <algorithm>
-using namespace std;
+#include <limits.h>
 
-typedef struct nn
-{
-    int x,y,z;
-}path;
+#define MAKE_COOR(x, y, z)		(((x) << 24) | ((y) << 16) | (z))
+#define X(coor)					((coor) >> 24)
+#define Y(coor)					(((coor) >> 16) & 0xFF)
+#define Z(coor)					((coor) & 0xFF)
 
+typedef struct BFS_NODE {
+	int x, y, z;
+	int time;
+} BFS_NODE;
+
+BFS_NODE _queue[60000];
+int _queue_front, _queue_back;
+
+void init_queue() {
+	_queue_front = 0;
+	_queue_back = 0;
+}
+
+void enqueue(const BFS_NODE* node) {
+	_queue[_queue_back++] = *node;
+}
+
+BFS_NODE dequeue() {
+	return _queue[_queue_front++];
+}
+
+int empty_queue() {
+	return _queue_front == _queue_back;
+}
+
+int h, r, c;
+int a, b;
+int start, end;
+int centers[100000];
 char map[35][35][35];
-int vis[35][35][35];
-int k,n,m,sx,sy,sz,ex,ey,ez;
-int to[6][3] = {{0,0,1},{0,0,-1},{0,1,0},{0,-1,0},{1,0,0},{-1,0,0}};
-int eye_alien = 0;    // the see sight of the alien
-int step_sum = 0;   //the sum step of the alien
-path sumpath[100];   //the path of the alien
+char vis[35][35][35];
 
-struct node
-{
-    int x,y,z,step;
-    int step_alien;
-};
-
-int check(int x,int y,int z , int s)
-{
-    if(x<0 || y<0 || z<0 || x>=k || y>=n || z>=m)
-        return 1;
-    if(map[x][y][z] == '#')
-        return 1;
-    if(vis[x][y][z])
-        return 1;
-    path step = sumpath[s];    // make sure the point of the block
-    if(eye_alien == 0)    // special judge the case of the eye_alien = 0
-        if(step.x == x && step.y == y && step.z == z) return 1;
-    for(int i = 0;i < 6;i++)
-    {
-        for(int j = 1;j <= eye_alien;j++)
-        {
-            int dx = step.x + to[i][0];
-            int dy = step.y + to[i][1];
-            int dz = step.z + to[i][2];
-            if(dx == x && dy ==y && dz == z) return 1;  
-        }
-    }
-    return 0;
+int abs(int x) {
+	return x < 0 ? -x : x;
 }
 
-int bfs()
-{
-    int i;
-    node a,next;
-    queue<node> Q;
-    a.x = sx,a.y = sy,a.z = sz;
-    a.step = 0;
-    a.step_alien = 0;    // init the first step of the alien
-    vis[sx][sy][sz] = 1;
-    Q.push(a);
-    while(!Q.empty())
-    {
-        a = Q.front();
-        Q.pop();
-        if(a.x == ex && a.y == ey && a.z == ez)
-            return a.step;
-        for(i = 0; i<6; i++)
-        {
-            next = a;
-            next.x = a.x+to[i][0];
-            next.y = a.y+to[i][1];
-            next.z = a.z+to[i][2];
-            next.step_alien = (next.step_alien + 1) % step_sum ;
-            if(check(next.x,next.y,next.z , next.step_alien))
-                continue;
-            vis[next.x][next.y][next.z] = 1;
-            next.step = a.step+1;
-            Q.push(next);
-        }
-    }
-    return 0;
+int check(int coor, int time) {
+	// 0 1 2 3 2 1 0 1 2 3 2 1 0 1 2 3 2 1 ...
+	int mapped = 0;
+	if (a > 1) {
+		int count = time / (a - 1);
+		if (count & 1)
+			mapped = (a - 1) - time % (a - 1);
+		else
+			mapped = time % (a - 1);
+	}
+
+	int my_x = X(coor), my_y = Y(coor), my_z = Z(coor);
+	int op_x = X(centers[mapped]), op_y = Y(centers[mapped]), op_z = Z(centers[mapped]);
+
+	int diff = INT_MAX;
+	if (my_x == op_x && my_y == op_y)
+		diff = abs(my_z - op_z);
+	else if (my_x == op_x && my_z == op_z)
+		diff = abs(my_y - op_y);
+	else if (my_y == op_y && my_z == op_z)
+		diff = abs(my_x - op_x);
+
+	return diff > b;
 }
 
-int main()
-{
-    int i,j,r;
-    while(scanf("%d%d%d",&k,&n,&m),n+m+k)
-    {
-        for(i = 0; i<k; i++)
-        {
-            for(j = 0; j<n; j++)
-            {
-                scanf("%s",map[i][j]);
-                for(r = 0; r<m; r++)
-                {
-                    if(map[i][j][r] == 'S')
-                    {
-                        sx = i,sy = j,sz = r;
-                    }
-                    else if(map[i][j][r] == 'E')
-                    {
-                        ex = i,ey = j,ez = r;
-                    }
-                }
-            }
-        }
-        scanf("%d%d" , &step_sum,&eye_alien);    // get the step of the path
-        for(int i = 0; i < step_sum ;i++) 
-        {
-            scanf("%d%d%d", & sumpath[i].x , &sumpath[i].y , &sumpath[i].z);
-        }
-        for(int i = 1; i <= step_sum - 1 ;i++)
-        {
-            sumpath[step_sum - 1 + i].x = sumpath[step_sum - 1 - i].x;
-            sumpath[step_sum - 1 + i].y = sumpath[step_sum - 1 - i].y; 
-            sumpath[step_sum - 1 + i].z = sumpath[step_sum - 1 - i].z;
-        }
-        step_sum = step_sum * 2 - 2;
-        if(step_sum == 0) step_sum = 1;
-//        printf("%d\n" , step_sum);
-//        for(int i = 0;i < step_sum;i++) printf("%d %d %d \n" , sumpath[i].x , sumpath[i].y , sumpath[i].z);
-        memset(vis,0,sizeof(vis));
-        int ans;
-        ans = bfs();
-        if(ans)
-            printf("Escaped in %d minute(s).\n",ans);
-        else
-            printf("Trapped!\n");
-    }
-    return 0;
+int bfs() {
+	static int dx[6] = { 1, -1, 0, 0, 0, 0 };
+	static int dy[6] = { 0, 0, 1, -1, 0, 0 };
+	static int dz[6] = { 0, 0, 0, 0, 1, -1 };
+
+	memset(vis, 0, sizeof(vis));
+	init_queue();
+
+	BFS_NODE current = { X(start), Y(start), Z(start), 0 };
+	if (!check(start, 0))
+		return -1;
+	else {
+		vis[X(start)][Y(start)][Z(start)] = 1;
+		enqueue(&current);
+	}
+
+	while (!empty_queue()) {
+		current = dequeue();
+
+		for (int i = 0; i < 6; ++i) {
+			BFS_NODE next = { current.x + dx[i], current.y + dy[i], current.z + dz[i], current.time + 1 };
+			if (next.x >= r || next.x < 0 || next.y >= c || next.y < 0 || next.z >= h || next.z < 0)
+				continue;
+			if (map[next.x][next.y][next.z] == '#')
+				continue;
+			if (vis[next.x][next.y][next.z])
+				continue;
+			if (!check(MAKE_COOR(next.x, next.y, next.z), next.time))
+				continue;
+			if (next.x == X(end) && next.y == Y(end) && next.z == Z(end))
+				return next.time;
+
+			vis[next.x][next.y][next.z] = 1;
+			enqueue(&next);
+		}
+	}
+
+	return -1;
+}
+
+int main(int argc, char* argv[]) {
+	while (1) {
+		scanf("%d%d%d", &h, &r, &c);
+		if (h == 0 && r == 0 && c == 0)
+			break;
+
+		for (int i = 0; i < h; ++i) {
+			for (int j = 0; j < r; ++j) {
+				for (int k = 0; k < c; ++k) {
+					scanf(" %c", &map[j][k][i]);
+					if (map[j][k][i] == 'S')
+						start = MAKE_COOR(j, k, i);
+					else if (map[j][k][i] == 'E')
+						end = MAKE_COOR(j, k, i);
+				}
+			}
+		}
+
+		scanf("%d%d", &a, &b);
+		for (int i = 0; i < a; ++i) {
+			int x, y, z;
+			scanf("%d%d%d", &z, &x, &y);
+			centers[i] = MAKE_COOR(x, y, z);
+		}
+
+		int ans = bfs();
+		if (ans == -1)
+			printf("-1\n");
+		else 
+			printf("Escaped in %d minute(s).\n", ans);
+	}
+
+	return 0;
 }

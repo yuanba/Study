@@ -35,13 +35,16 @@ int check(int x,int y,int z , int s)
     path step = sumpath[s];    // make sure the point of the block
     if(eye_alien == 0)    // special judge the case of the eye_alien = 0
         if(step.x == x && step.y == y && step.z == z) return 1;
+    int dx = x;
+    int dy = y;
+    int dz = z;
     for(int i = 0;i < 6;i++)
     {
         for(int j = 1;j <= eye_alien;j++)
         {
-            int dx = step.x + to[i][0];
-            int dy = step.y + to[i][1];
-            int dz = step.z + to[i][2];
+            dx += to[i][0];
+            dy += to[i][1];
+            dz += to[i][2];
             if(dx == x && dy ==y && dz == z) return 1;  
         }
     }
@@ -125,7 +128,7 @@ int main()
         if(ans)
             printf("Escaped in %d minute(s).\n",ans);
         else
-            printf("Trapped!\n");
+            printf("-1\n");
     }
     return 0;
 }

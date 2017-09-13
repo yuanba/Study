@@ -267,4 +267,440 @@ sa登录是特殊登录，是最高权限登录，需要对密码进行重点的
    * 一个表只能存在一个IDENTITY,并且必须是数值类型的
    * 可以制定初始值和增量，默认是都是1
    * 标识符列不允许NULL , DEFAULT
-   * ​
+
+   一个会话中一次只可以指定一个表打开我们的 IDENTITY_INSERT选项
+
+   ```mssql
+   use database_name;
+   --开启我们的插入修补选项，开启之后我们徐娅手工计算要填补的漏洞并且insert语句中必须要指定列名
+   set identity_insert on    
+   insert into table_name(indentity_col , col2) values(... , ...);
+   ```
+
+   ```mssql
+   --关闭我们的插入修补选项
+   set identity_insert off
+   ```
+
+## 4 Transact-SQL编程
+
+### 异常处理
+
+**`PRINT`可以作为异常处理的机制之一**
+
+启动错误会话处理机制
+
+```mssql
+RAISERROR ( { msg_id | msg_str | @local_variable }
+{ ,severity ,state }
+[ ,argument [ ,...n ] ] )
+[ WITH option [ ,...n ] ]
+```
+
+* msg_id > 50000 , 未指定id自动引发50000的错误消息
+* msg_str : 用户自定义的错误消息,2047字符个数是上限 ， 引发的错误号是5000
+* @local_variable : 数据库变量，必须是char / varchar
+
+```mssql
+raiserror(N'this is a message %s %d',
+         10,    --错误等级
+          1，   --错误状态
+          N'number'   --第一个参数
+          5     --第二个参数
+         )
+```
+
+当错误的严重程度>=11变回进入CATCH块进行处理，大于20终止数据库连接
+
+```mssql
+BEGIN TRY
+-- 错误级别小于10时执行下面的语句且打印系统错误信息；
+-- 错误级别等于10，则仅执行下面的语句；
+-- 错误级别大于10则会导致执行跳转到CATCH 块.
+    RAISERROR ('Error raised in TRY block.', -- 信息.
+               16, -- 错误级别.
+               1 -- 状态.
+               );
+END TRY
+BEGIN CATCH
+    DECLARE @ErrorMessage NVARCHAR(4000);
+    DECLARE @ErrorSeverity INT;
+    DECLARE @ErrorState INT;
+
+    SELECT 
+        @ErrorMessage = ERROR_MESSAGE(),
+        @ErrorSeverity = ERROR_SEVERITY(),
+        @ErrorState = ERROR_STATE();
+
+    -- 在CATCH块内使用RAISERROR返回关于导致执行
+	-- 跳转到CATCH块的原始错误的错误信息
+    RAISERROR (@ErrorMessage, -- 信息.
+               @ErrorSeverity, -- 错误级别.
+               @ErrorState -- 状态.
+               );
+END CATCH;
+
+--输出消息 50000，级别 16，状态 1，第 22 行
+--Error raised in TRY block.
+```
+
+### 游标
+
+```mssql
+USE AdventureWorks
+GO
+-- （1）声明游标contact_cursor
+DECLARE contact_cursor CURSOR FOR
+SELECT LastName FROM Person.Contact
+WHERE LastName LIKE 'B%'
+ORDER BY LastName
+
+-- （2）打开游标
+OPEN contact_cursor
+
+-- （3）执行第一次提取.
+FETCH NEXT FROM contact_cursor
+
+-- （4）检查@@FETCH_STATUS 以查看是否还有更多的行可以提取.
+-- 如果有则提取下一行
+WHILE @@FETCH_STATUS = 0
+BEGIN
+   -- This is executed as long as the previous fetch succeeds.
+   FETCH NEXT FROM contact_cursor
+END
+
+-- （5）关闭并删除游标
+CLOSE contact_cursor
+DEALLOCATE contact_cursor
+GO
+```
+
+* 声明 -> 打开 -> 提取 -> 关闭 -> 删除
+* 游标对应的查询语句不能存在变量，SELECT支持变量查询
+* 游标打开开始执行SELECT操作
+* @@FETCH_STATUS : 检测提取的结果是否成功
+* 关闭并不释放游标的资源，删除才是
+
+**游标选项**
+
+游标选项在创建的时候添加
+
+* GLOBAL
+
+  作用域是全局的，隐形自动释放
+
+  是跟随**连接**的
+
+* LOCAL
+
+  作用域是本次的存储过程，函数内的
+
+  是跟随代码块的
+
+* UPDATE : 可修改的游标
+
+* SCROLL : 双向的随意移动的游标
+
+  ```mssql
+  fetch prior from cursor_name;
+  fetch next from cursor_name;
+  fetch absolute 2 from cursor_name;
+  fetch relative -2 from cursor_name;
+  ```
+
+**游标信息查询**
+
+```mssql
+@@cursor_rows    --游标的行数
+@@fetch_status   --游标当前是否还可以提取的状态
+    0 - 正常
+    -1 - 错误
+    -2 - 行不存在
+```
+
+**数据提取**
+
+* 系统变量必须使用@开头
+
+* ```mssql
+  print '111' + '222' + '333'    --字符串打印标准输出
+  ```
+
+* ```mssql
+  fecth next from name into @var1,@var2;
+  ```
+
+### 触发器
+
+1. 特殊的存储过程
+
+2. 优点
+
+   * 可以更好的实现对应的参照完整性，保证数据库的一致性
+   * 防止恶意的更新操作(BEFORE)
+   * 评估我们的修改前后的表的状态
+   * 触发器可以多个，针对同一个语句可以实现多种的响应动作
+   * 自动执行，对目标表的操作执行了修改会立即执行对于国内的预制的措施，**触发器是可以连锁的**
+
+3. 类型
+
+   * AFTER : 事后触发器
+     * 晚于约束执行
+     * 表
+     * 一个表可以多个
+     * 只能对基表使用
+   * INSTEAD OF : 代替触发动作
+     * 先于约束执行
+     * 表和视图
+     * 一个表只有一个
+     * 还可以针对视图创建，视图的唯一的触发器
+
+4. AFTER触发器创建
+
+   ```mssql
+   --AFTER TRIGGER
+   --需要注意一点，我们的触发器必须是第一个执行的查询语句，use test之后必须使用go否则下面的语句现实的不是第一条SQL语句
+   /*
+   下面的测试用例中
+   a
+     PK name char(20)
+        id int foreign key references b(id)
+   b
+     PK id int
+        vender int;
+   */
+   /*
+   use test;
+   go
+   create trigger defend_insert on dbo.a
+   after insert
+   as
+   begin
+   declare @test int
+   select @test=j.vender from inserted i,dbo.b j where i.id = j.id
+   if @test < 5
+   begin 
+   raiserror('low vender' , 16 , 1)
+   rollback transaction
+   end
+   go*/    --go必不可少，无法判断是否结束
+   use test;
+   go
+   --insert into b values(1,3),(2,6),(3,7),(4,4),(5,1),(6,2);
+   --select * from b;
+
+   --insert into a values('lantian' , 2);
+   select * from a;
+   ```
+
+5. 禁止和允许触发器
+
+   ```mssql
+   alter table table_name disable trigger trigger_name;
+   alter table table_name enable trigger trigger_name;
+   ```
+
+6. 特殊表(deleted / inserted)
+
+   * SQL Server自动创建和管理这两个表
+   * 不可以直接对这两种表执行DML操作
+   * 作用主要在于找出表的更改前后的状态差异并采取相应的措施
+   * deleted / inserted 表用来存储被影响的行的副本
+     * deleted : DELETE / UPDATE
+     * inserted : INSERT / UPDATE
+   * UPDATE :
+     1. 旧记录 存放在deleted表
+     2. 新记录 存放在inserted表
+
+7. INSTEAD OF 触发器的创建
+
+   ```mssql
+   --create database record
+   /*
+   use record;
+   go
+
+   create table person(
+   ssn char(20) primary key,
+   name char(20),
+   address char(20),
+   birthdate datetime
+   )
+
+   create table employee(
+   employeeid int primary key,
+   ssn char(20),
+   department char(20),
+   salary int
+   )
+
+   create table preson_duplicate(
+   ssn char(20),
+   name char(20),
+   address char(20),
+   birthdate datetime,
+   inserttime datetime
+   )
+
+   create view person_show as
+   select person.ssn as ssn , name , address , birthdate , employeeid , department , salary
+   from person , employee
+   where person.ssn = employee.ssn
+   go
+
+   use record;
+   go
+   create trigger defend on person_show
+   instead of insert
+   as
+   begin
+   if(not exists(select * from inserted , person where inserted.ssn = person.ssn))
+       insert into person 
+   	    select ssn, name, address , birthdate from inserted;
+   else
+       insert into preson_duplicate
+   	    select ssn , name , address , birthdate , getdate() from inserted;
+
+   if(not exists(select * from inserted , employee where inserted.ssn = employee.ssn))
+       insert into employee
+   	    select employeeid , ssn , department , salary from inserted;
+   else
+       update employee
+   	    set employeeid = i.employeeid,
+   			department = i.department,
+   			salary = i.salary
+   	from employee , inserted as i
+   	where employee.ssn = i.ssn
+   end
+   go
+
+   */
+   use record;
+   go
+   insert into person_show values('i am ssn' , 'lantian' , 'bit' , getdate() , 1 , 'xinyi' , 400);
+
+   drop trigger defend;
+   select * from person_show;
+   select * from employee;
+   select * from person;
+   select * from preson_duplicate;
+   ```
+
+8. 触发器相关的系统参数
+
+   * not for replication : 复制代理拒绝执行触发器
+   * `@@rowcount` : 返回上一句语句的影响行数
+   * `@@trancount` : 返回当前连接上的transcation语句的数目
+   * `set nocount on`  : 组织返回受影响的行数信息，只返回语句是否执行成功，可以提高效率
+
+9. 触发器回滚操作
+
+   1. 当前事务中该时间点之前所做的所有数据修改都将回滚，包括触发器所做的修改。
+   2. 触发器继续执行 ROLLBACK 语句之后的所有语句。如果这些语句中的任意语句修改数据，则不回滚这些修改。
+
+## 5 数据库备份和恢复
+
+### 备份概述
+
+1. 数据的备份（“数据备份”）的范围可以是完整的数据库、部分数据库或者一组文件或文件组。对于这些范围，SQL Server 均支持完整和差异备份
+
+2. 备份类型
+
+   * 完整备份
+
+     包含要备份的特定的数据库的所有的数据以及可以回复这个数据库的足够多的日志
+
+   * 差异备份
+
+     * 完整备份成为差异被分的基准
+     * 差异备份基于数据库
+     * 建立备份的速度快
+     * 还原的时候首先还原我们的完整备份然后在回复对应的差异备份
+     * 差异备份需要定时的转化成完整备份，因为差异备份的数据量太大
+
+   * 日志备份
+
+     每个日志备份都包括创建备份时处于活动状态的部分事务日志，以及先前日志备份中未备份的所有日志记录。
+
+3. 回复模式
+
+   * 简单恢复模式
+
+     * 不进行事务备份，备份易于管理，但是回复的时候只会恢复到最新的一次的备份的结尾，数据库最新进行的修改操作都会被丢失
+     * 简单模式先，工作损失的风险会随着时间的推移而增加，知道进行下一次的完整备份和差异备份为止
+
+   * 完整恢复模式
+
+     完整恢复模式使用**日志备份**策略
+
+     * **使用日志**在最大范围内保障我们的数据安全，需要使用**备份事务日志**的方法
+
+     * 优点是可以将数据库的状态回复到任意保存了日志的记录点，缺点就是会增加数据库备份和回复的复杂性
+
+     * 大多数的应用环境都会使用
+
+     * **尾日志备份** 如果尾日志(尚未备份的日志)备份成功，可以避免所有的数据的丢失
+
+     * 策略
+
+       有时候为了尽可能的缩短我们的还原的时间，可以对相同数据进行一系列的差异备份甚至是完整备份来加快我们的回复进程
+
+       **完整数据库备份 -> 事务日志 -> 差异数据库备份 -> 事务日志 -> 完整数据库备份**
+
+4. 日志备份
+
+   1. 在完整恢复模式和大容量日志恢复模式下,使用日志备份是非常的有必要的
+   2. 日志备份可以将数据库的回复到故障点和特定的时间点
+   3. 建议经常执行日志备份(在业务的允许范围之内)
+   4. 在创建日志备份之前请先确定我们的完整的数据库的备份作为基准
+   5. 日志链 : 连续的日志备份序列，日志链从数据库的完整备份开始
+
+5. 简单回复模式下的备份和回复操作
+
+   * 数据库的还原
+     1. 还原的操作只是将数据从备份集中拷贝到数据库的文件中，它不会进行末提交事务的撤消，也不会重做记录的日志文件中已经提交的事务
+     2. 在还原状态下的数据库可以继续还原后续的差异备份
+     3. 可以将还原状态理解成是加载我们的还原的进度，回复操作在进度加载完确定完之后执行
+   * 数据库的回复
+
+   ```mssql
+   /×
+   1.每次备份会产生一个备份集文件，而一个备份集文件可以保存多个备份集。
+   2.我们通过制定选用的备份集文件编号从而使用不同的备份文件
+   3.备份集在备份集文件中有一个唯一的编号，如果不加指定，文件中的第一个备份集的编号是1，第2个备份集的编号是2，以此类推。备份集的编号在管理备份时和恢复数据库时使用。第1步中的备份集在该文件中的编号为1。
+   */
+   USE master;
+   --1. 设置数据库为简单恢复模式
+   ALTER DATABASE AdventureWorks SET RECOVERY SIMPLE;
+   GO
+   -- 2.执行数据库的完整备份
+   -- 首先建立我们的完整备份，之后是我们的各各差异备份
+   BACKUP DATABASE AdventureWorks 
+       TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
+       WITH FORMAT;
+   GO
+   /*
+   这里忽略其中的一大批的数据库的语句
+   */
+   --3. 执行数据库的差异备份，使用和上面一样的文件，自动计算文件的编号是2，如果是新文件自动计算为1
+   BACKUP DATABASE AdventureWorks
+       TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak'
+       WITH DIFFERENTIAL;
+   GO
+   /*
+   可以考虑删除数据库，然后使用下面的语句对数据进行还原操作
+   */
+   --4. 还原数据库完整备份 (自备份集 1)，但不恢复数据库.
+   RESTORE DATABASE AdventureWorks 
+       FROM DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
+       WITH FILE=1, NORECOVERY;
+   --5. 还原数据库差异备份 (自备份集 2)，恢复数据库.
+   RESTORE DATABASE AdventureWorks
+       FROM DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
+       WITH FILE=2, RECOVERY;
+   GO
+   ```
+
+6. 完整恢复模式下的备份和恢复文件
+
+   1. 也就是说，完整恢复模式下的备份由数据库备份和日志备份组成。
