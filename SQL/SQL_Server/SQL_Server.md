@@ -191,7 +191,7 @@ sa登录是特殊登录，是最高权限登录，需要对密码进行重点的
 
   ​
 
-## 表
+## 3 表
 
 ### 表的概念
 
@@ -661,46 +661,130 @@ GO
      1. 还原的操作只是将数据从备份集中拷贝到数据库的文件中，它不会进行末提交事务的撤消，也不会重做记录的日志文件中已经提交的事务
      2. 在还原状态下的数据库可以继续还原后续的差异备份
      3. 可以将还原状态理解成是加载我们的还原的进度，回复操作在进度加载完确定完之后执行
+
    * 数据库的回复
 
-   ```mssql
-   /×
-   1.每次备份会产生一个备份集文件，而一个备份集文件可以保存多个备份集。
-   2.我们通过制定选用的备份集文件编号从而使用不同的备份文件
-   3.备份集在备份集文件中有一个唯一的编号，如果不加指定，文件中的第一个备份集的编号是1，第2个备份集的编号是2，以此类推。备份集的编号在管理备份时和恢复数据库时使用。第1步中的备份集在该文件中的编号为1。
-   */
-   USE master;
-   --1. 设置数据库为简单恢复模式
-   ALTER DATABASE AdventureWorks SET RECOVERY SIMPLE;
-   GO
-   -- 2.执行数据库的完整备份
-   -- 首先建立我们的完整备份，之后是我们的各各差异备份
-   BACKUP DATABASE AdventureWorks 
-       TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
-       WITH FORMAT;
-   GO
-   /*
-   这里忽略其中的一大批的数据库的语句
-   */
-   --3. 执行数据库的差异备份，使用和上面一样的文件，自动计算文件的编号是2，如果是新文件自动计算为1
-   BACKUP DATABASE AdventureWorks
-       TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak'
-       WITH DIFFERENTIAL;
-   GO
-   /*
-   可以考虑删除数据库，然后使用下面的语句对数据进行还原操作
-   */
-   --4. 还原数据库完整备份 (自备份集 1)，但不恢复数据库.
-   RESTORE DATABASE AdventureWorks 
-       FROM DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
-       WITH FILE=1, NORECOVERY;
-   --5. 还原数据库差异备份 (自备份集 2)，恢复数据库.
-   RESTORE DATABASE AdventureWorks
-       FROM DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
-       WITH FILE=2, RECOVERY;
-   GO
-   ```
+     ```mssql
+     /×
+     1.每次备份会产生一个备份集文件，而一个备份集文件可以保存多个备份集。
+     2.我们通过制定选用的备份集文件编号从而使用不同的备份文件
+     3.备份集在备份集文件中有一个唯一的编号，如果不加指定，文件中的第一个备份集的编号是1，第2个备份集的编号是2，以此类推。备份集的编号在管理备份时和恢复数据库时使用。第1步中的备份集在该文件中的编号为1。
+     */
+     USE master;
+     --1. 设置数据库为简单恢复模式
+     ALTER DATABASE AdventureWorks SET RECOVERY SIMPLE;
+     GO
+     -- 2.执行数据库的完整备份
+     -- 首先建立我们的完整备份，之后是我们的各各差异备份
+     BACKUP DATABASE AdventureWorks 
+         TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
+         WITH FORMAT;
+     GO
+     /*
+     这里忽略其中的一大批的数据库的语句
+     */
+     --3. 执行数据库的差异备份，使用和上面一样的文件，自动计算文件的编号是2，如果是新文件自动计算为1
+     BACKUP DATABASE AdventureWorks
+         TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak'
+         WITH DIFFERENTIAL;
+     GO
+     /*
+     可以考虑删除数据库，然后使用下面的语句对数据进行还原操作
+     */
+     --4. 还原数据库完整备份 (自备份集 1)，但不恢复数据库.
+     RESTORE DATABASE AdventureWorks 
+         FROM DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
+         WITH FILE=1, NORECOVERY;
+     --5. 还原数据库差异备份 (自备份集 2)，恢复数据库.
+     RESTORE DATABASE AdventureWorks
+         FROM DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
+         WITH FILE=2, RECOVERY;
+     GO
+     ```
 
 6. 完整恢复模式下的备份和恢复文件
 
    1. 也就是说，完整恢复模式下的备份由数据库备份和日志备份组成。
+
+   2. ```mssql
+      USE master;
+      --1. 将数据库修改为完整恢复模式.默认是简单的恢复模式
+      ALTER DATABASE AdventureWorks SET RECOVERY FULL;
+      GO
+      --2. 执行数据库的完整备份.FORMAT表示如果备份文件中存在文件则清空病创建新的内容，否则创建一个新的备份文件
+      BACKUP DATABASE AdventureWorks 
+          TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak' 
+          WITH FORMAT;
+      GO
+      --3. 创建日志文件备份.编号是2的备份文件
+      BACKUP LOG AdventureWorks
+          TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak';
+      GO
+
+      --4.创建尾日志备份.使用了NORECOVERY选项表示创建的是尾日志备份文件，尾日志备份完成之后不可以在进行数据库的任何日志备份，整个数据库进入还原状态
+      BACKUP LOG AdventureWorks 
+           TO DISK = 'C:\SQLServerBackups\AdventureWorks.bak'
+           WITH NORECOVERY; 
+      GO
+
+      --开始还原数据库
+      --5.还原数据库的完整备份
+      restore database AdventureWorks
+      from disk = 'C:\SQLServerBackups\AdventureWorks.bak'
+      with file = 1,
+      norecovery
+      --6.还原常规日志备份
+      restore log AdventureWorks
+      from disk = 'C:\SQLServerBackups\AdventureWorks.bak'
+      with file = 2,
+      norecovery
+      --7.还原尾日志备份文件
+      restore log AdventureWorks
+      from disk = 'C:\SQLServerBackups\AdventureWorks.bak'
+      with file = 3,
+      norecovery
+      go
+      --8.开始恢复数据库,前面的操作文成之后数据库进入还原状态，下面的语句执行完之后数据库完成恢复
+      restore database AdventureWorks with recovery
+      go
+      ```
+
+   3. 时间点恢复
+
+      1. 如果发生了部分的日志文件的破坏或者说为了专门恢复到一个过去对应的时间点需要我们使用时间点回复策略
+
+      2. 时间点恢复是部分恢复的一种，其它的方法还可以基于日志序列号、事务序列号等。
+
+      3. 使用
+
+         ```mssql
+         restore log database_name 
+         from disk = 'path'
+         with file = 3,recovery,stopat='2007-10-7 17:35:18';
+         ```
+
+## 6 数据库设计
+
+### 概述
+
+1. 数据库设计要素
+   * 应用环境:首选重视，业务需求，应用程序设计和数据库设计不应该分开来看待
+   * 数据库模式(数学模型)
+   * 满足的功能
+2. 数据库设计的关键要素 : 数据的完整性
+
+### 数据库设计方法
+
+1. 数据库设计存在很多的设计方法
+
+   这些方法的核心阶段是数据建模，而数据建模又包括**逻辑建模**和**物理建模**阶段。
+
+2. 逻辑建模是数据库设计的最重要的阶段
+
+   逻辑模型的设计，只考虑业务需求不考虑特定的数据库环境
+
+3. 物理建模阶段
+
+   将具体的逻辑模型映射到对应的特定的DBMS数据库系统上，在逻辑建模的基础上实现
+
+4. ​
