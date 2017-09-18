@@ -26,7 +26,6 @@ int judge()
     sum = 0;
     for(int i = 0;i < n;i++) sum += a[i] * b[i];
     if(sum != n) return 0;
-
     return 1;
 }
 
@@ -40,7 +39,7 @@ int dfs(int s , int now)
     else
     {
         if(now == n) return 0;
-        for(int i = 0; i <= n - s;i++)
+        for(int i = 0 ; i <= n - s ; i++)
         {
             b[now] = i;
             if(dfs(s + i , now + 1) == 1) return 1;

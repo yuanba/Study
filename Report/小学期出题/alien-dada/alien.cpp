@@ -131,7 +131,7 @@ int main(int argc, char* argv[]) {
 			int x, y, z;
 			scanf("%d%d%d", &z, &x, &y);
 			centers[i] = MAKE_COOR(x, y, z);
-		}
+		    }
 
 		int ans = bfs();
 		if (ans == -1)
