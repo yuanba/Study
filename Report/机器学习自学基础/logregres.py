@@ -41,7 +41,7 @@ def soclogistic(datamat , label):
     datamatrix = array(datamat)
     m , n = shape(datamat)
     weights = ones(n)
-    for j in range(500):
+    for j in range(150):
         dataindex = list(range(m))
         for i in range(m):
             alpha = 4 / (i + j + 1.0) + 0.01
@@ -65,7 +65,7 @@ def plotfit(weights):
         else:
             x2.append(dataarr[i,1]) ; y2.append(dataarr[i,2])
     fig = plt.figure()
-    ax = fig.add_subplot(111)
+    ax = fig.add_subplot(121)
     ax.scatter(x1 , y1 , s = 30 , c = 'red' , marker = 's')
     ax.scatter(x2 , y2 , s = 30 , c = 'green')
     x = arange(-3.0 , 3.0 , 0.1)
@@ -76,14 +76,41 @@ def plotfit(weights):
     plt.show()
 
 if __name__ == "__main__":
-    from time import *
+    import matplotlib.pyplot as plt
+    fig = plt.figure()
+    ax1 = fig.add_subplot(121)
+    ax2 = fig.add_subplot(122)
     data , label = loadtext()
+    dataarr = array(data)
+    n = shape(dataarr)[0]
+    x1 = [] ; y1 = []
+    x2 = [] ; y2 = []
+    for i in range(n):
+        if int(label[i]) == 1:
+            x1.append(dataarr[i,1]) ; y1.append(dataarr[i,2])
+        else:
+            x2.append(dataarr[i,1]) ; y2.append(dataarr[i,2])
+    ax1.scatter(x1 , y1 , s = 30 , c = 'red' , marker = 's')
+    ax1.scatter(x2 , y2 , s = 30 , c = 'green' , marker = 's')
+    ax2.scatter(x1 , y1 , s = 30 , c = 'red' , marker = 's')
+    ax2.scatter(x2 , y2 , s = 30 , c = 'green' , marker = 's')
+    x = arange(-3.0 , 3.0 , 0.1)
+    from time import *
     t1 = time()
-    weights = logistic(data , label)
+    weight1 = logistic(data , label)
     d1 = time() - t1
     t1 = time()
-    weights = soclogistic(data , label)
+    weight2 = soclogistic(data , label)
     d2 = time() - t1
     print("BGD 500 : " , d1)
-    print('SGD 500 : ' , d2)
+    print('SGD 1000 : ' , d2)
+    y1 = (-weight1[0] - weight1[1] * x ) / weight1[2]
+    y2 = (-weight2[0] - weight2[1] * x ) / weight2[2]
+    ax1.plot(x , y1)
+    ax2.plot(x , y2)
+    ax1.set_xlabel('bgd_x1')
+    ax1.set_ylabel('bgd_y1')
+    ax2.set_xlabel('sgd_x1')
+    ax2.set_ylabel('sgd_y1')
+    plt.show()
     # plotfit(weights)
