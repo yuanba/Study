@@ -41,7 +41,7 @@ def soclogistic(datamat , label):
     datamatrix = array(datamat)
     m , n = shape(datamat)
     weights = ones(n)
-    for j in range(150):
+    for j in range(400):
         dataindex = list(range(m))
         for i in range(m):
             alpha = 4 / (i + j + 1.0) + 0.01
@@ -112,5 +112,5 @@ if __name__ == "__main__":
     ax1.set_ylabel('bgd_y1')
     ax2.set_xlabel('sgd_x1')
     ax2.set_ylabel('sgd_y1')
-    plt.show()
+    # plt.show()
     # plotfit(weights)
